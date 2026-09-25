@@ -1,0 +1,39 @@
+{
+  "agent": "sustainable-bond-diligence-agent",
+  "version": "0.1.0",
+  "checked_on": "2026-09-24",
+  "python_version": "3.13.5",
+  "platform": "Linux",
+  "unit_tests": {
+    "executed": 109,
+    "failures": 0,
+    "errors": 0,
+    "result": "PASS",
+    "duration_seconds_observed": 1.323
+  },
+  "routes_tested": [
+    "green-bond",
+    "social-bond",
+    "sustainability-bond",
+    "sustainability-linked-bond",
+    "transition-bond"
+  ],
+  "route_count": 5,
+  "stage_definitions": 13,
+  "deterministic_operations": 9,
+  "synthetic_default_status": "SYNTHETIC_COMPLETE_NOT_APPROVED",
+  "source_study_status": "NEEDS_DATA",
+  "schema_validation": {
+    "schemas_valid": true,
+    "example_artifacts_validated": 14
+  },
+  "hosted_ci_run": false,
+  "live_llm_integration_tested": false,
+  "live_investment_accuracy_tested": false,
+  "independent_audit": false,
+  "published_to_github": false,
+  "notes": [
+    "Common control tests are deliberately repeated in each independent package; total executions are not independent financial-model validations.",
+    "No complete live issuer diligence, market-price validation, legal opinion, causal or ecological validation, production security audit or authenticated review was performed."
+  ]
+}

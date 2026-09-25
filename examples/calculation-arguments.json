@@ -1,0 +1,7 @@
+{
+  "face": 100,
+  "annual_coupon": 0.05,
+  "yield_to_maturity": 0.06,
+  "years": 5,
+  "frequency": 2
+}

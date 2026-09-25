@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "mode": "research",
+  "as_of": "2026-09-24",
+  "route": "green-bond",
+  "subject": {
+    "id": "REPLACE-SUBJECT-ID",
+    "name": "Replace with actual subject name"
+  },
+  "mandate": {
+    "objective": "REPLACE: objective from the actual mandate",
+    "base_currency": "USD",
+    "horizon": "REPLACE: horizon from the actual mandate",
+    "constraints": "REPLACE: constraints from the actual mandate",
+    "risk_budget": "REPLACE: risk budget from the actual mandate",
+    "jurisdiction": "REPLACE: jurisdiction from the actual mandate"
+  },
+  "freshness_policy": {
+    "market_max_age_days": 1,
+    "standard_review_max_age_days": 90
+  },
+  "instruments": [],
+  "evidence": []
+}

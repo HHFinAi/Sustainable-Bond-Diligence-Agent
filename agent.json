@@ -1,0 +1,644 @@
+{
+  "schema_version": "1.0",
+  "name": "sustainable-bond-diligence-agent",
+  "title": "Sustainable Bond Diligence Agent",
+  "version": "0.1.0",
+  "owner": "HHFinAi",
+  "default_route": "green-bond",
+  "routes": {
+    "green-bond": {
+      "title": "Green Bond",
+      "nodes": [
+        {
+          "id": "mandate",
+          "depends_on": []
+        },
+        {
+          "id": "evidence",
+          "depends_on": [
+            "mandate"
+          ]
+        },
+        {
+          "id": "terms",
+          "depends_on": [
+            "evidence"
+          ]
+        },
+        {
+          "id": "credit",
+          "depends_on": [
+            "terms"
+          ]
+        },
+        {
+          "id": "label",
+          "depends_on": [
+            "credit"
+          ]
+        },
+        {
+          "id": "impact",
+          "depends_on": [
+            "label"
+          ]
+        },
+        {
+          "id": "market",
+          "depends_on": [
+            "impact"
+          ]
+        },
+        {
+          "id": "valuation",
+          "depends_on": [
+            "market"
+          ]
+        },
+        {
+          "id": "expression",
+          "depends_on": [
+            "valuation"
+          ]
+        },
+        {
+          "id": "stewardship",
+          "depends_on": [
+            "expression"
+          ]
+        },
+        {
+          "id": "challenge",
+          "depends_on": [
+            "stewardship"
+          ]
+        },
+        {
+          "id": "memo",
+          "depends_on": [
+            "challenge"
+          ]
+        }
+      ],
+      "asset_types": [
+        "bond"
+      ],
+      "primary_evidence_kinds": [
+        "issuer",
+        "instrument",
+        "official",
+        "contract",
+        "ecological"
+      ],
+      "required_label": "green"
+    },
+    "social-bond": {
+      "title": "Social Bond",
+      "nodes": [
+        {
+          "id": "mandate",
+          "depends_on": []
+        },
+        {
+          "id": "evidence",
+          "depends_on": [
+            "mandate"
+          ]
+        },
+        {
+          "id": "terms",
+          "depends_on": [
+            "evidence"
+          ]
+        },
+        {
+          "id": "credit",
+          "depends_on": [
+            "terms"
+          ]
+        },
+        {
+          "id": "label",
+          "depends_on": [
+            "credit"
+          ]
+        },
+        {
+          "id": "impact",
+          "depends_on": [
+            "label"
+          ]
+        },
+        {
+          "id": "market",
+          "depends_on": [
+            "impact"
+          ]
+        },
+        {
+          "id": "valuation",
+          "depends_on": [
+            "market"
+          ]
+        },
+        {
+          "id": "expression",
+          "depends_on": [
+            "valuation"
+          ]
+        },
+        {
+          "id": "stewardship",
+          "depends_on": [
+            "expression"
+          ]
+        },
+        {
+          "id": "challenge",
+          "depends_on": [
+            "stewardship"
+          ]
+        },
+        {
+          "id": "memo",
+          "depends_on": [
+            "challenge"
+          ]
+        }
+      ],
+      "asset_types": [
+        "bond"
+      ],
+      "primary_evidence_kinds": [
+        "issuer",
+        "instrument",
+        "official",
+        "contract",
+        "ecological"
+      ],
+      "required_label": "social"
+    },
+    "sustainability-bond": {
+      "title": "Sustainability Bond",
+      "nodes": [
+        {
+          "id": "mandate",
+          "depends_on": []
+        },
+        {
+          "id": "evidence",
+          "depends_on": [
+            "mandate"
+          ]
+        },
+        {
+          "id": "terms",
+          "depends_on": [
+            "evidence"
+          ]
+        },
+        {
+          "id": "credit",
+          "depends_on": [
+            "terms"
+          ]
+        },
+        {
+          "id": "label",
+          "depends_on": [
+            "credit"
+          ]
+        },
+        {
+          "id": "impact",
+          "depends_on": [
+            "label"
+          ]
+        },
+        {
+          "id": "market",
+          "depends_on": [
+            "impact"
+          ]
+        },
+        {
+          "id": "valuation",
+          "depends_on": [
+            "market"
+          ]
+        },
+        {
+          "id": "expression",
+          "depends_on": [
+            "valuation"
+          ]
+        },
+        {
+          "id": "stewardship",
+          "depends_on": [
+            "expression"
+          ]
+        },
+        {
+          "id": "challenge",
+          "depends_on": [
+            "stewardship"
+          ]
+        },
+        {
+          "id": "memo",
+          "depends_on": [
+            "challenge"
+          ]
+        }
+      ],
+      "asset_types": [
+        "bond"
+      ],
+      "primary_evidence_kinds": [
+        "issuer",
+        "instrument",
+        "official",
+        "contract",
+        "ecological"
+      ],
+      "required_label": "sustainability"
+    },
+    "sustainability-linked-bond": {
+      "title": "Sustainability Linked Bond",
+      "nodes": [
+        {
+          "id": "mandate",
+          "depends_on": []
+        },
+        {
+          "id": "evidence",
+          "depends_on": [
+            "mandate"
+          ]
+        },
+        {
+          "id": "terms",
+          "depends_on": [
+            "evidence"
+          ]
+        },
+        {
+          "id": "credit",
+          "depends_on": [
+            "terms"
+          ]
+        },
+        {
+          "id": "label",
+          "depends_on": [
+            "credit"
+          ]
+        },
+        {
+          "id": "impact",
+          "depends_on": [
+            "label"
+          ]
+        },
+        {
+          "id": "market",
+          "depends_on": [
+            "impact"
+          ]
+        },
+        {
+          "id": "valuation",
+          "depends_on": [
+            "market"
+          ]
+        },
+        {
+          "id": "expression",
+          "depends_on": [
+            "valuation"
+          ]
+        },
+        {
+          "id": "stewardship",
+          "depends_on": [
+            "expression"
+          ]
+        },
+        {
+          "id": "challenge",
+          "depends_on": [
+            "stewardship"
+          ]
+        },
+        {
+          "id": "memo",
+          "depends_on": [
+            "challenge"
+          ]
+        }
+      ],
+      "asset_types": [
+        "bond"
+      ],
+      "primary_evidence_kinds": [
+        "issuer",
+        "instrument",
+        "official",
+        "contract",
+        "ecological"
+      ],
+      "required_label": "sustainability-linked"
+    },
+    "transition-bond": {
+      "title": "Transition Bond",
+      "nodes": [
+        {
+          "id": "mandate",
+          "depends_on": []
+        },
+        {
+          "id": "evidence",
+          "depends_on": [
+            "mandate"
+          ]
+        },
+        {
+          "id": "terms",
+          "depends_on": [
+            "evidence"
+          ]
+        },
+        {
+          "id": "credit",
+          "depends_on": [
+            "terms"
+          ]
+        },
+        {
+          "id": "label",
+          "depends_on": [
+            "credit"
+          ]
+        },
+        {
+          "id": "transition",
+          "depends_on": [
+            "label"
+          ]
+        },
+        {
+          "id": "impact",
+          "depends_on": [
+            "transition"
+          ]
+        },
+        {
+          "id": "market",
+          "depends_on": [
+            "impact"
+          ]
+        },
+        {
+          "id": "valuation",
+          "depends_on": [
+            "market"
+          ]
+        },
+        {
+          "id": "expression",
+          "depends_on": [
+            "valuation"
+          ]
+        },
+        {
+          "id": "stewardship",
+          "depends_on": [
+            "expression"
+          ]
+        },
+        {
+          "id": "challenge",
+          "depends_on": [
+            "stewardship"
+          ]
+        },
+        {
+          "id": "memo",
+          "depends_on": [
+            "challenge"
+          ]
+        }
+      ],
+      "asset_types": [
+        "bond"
+      ],
+      "primary_evidence_kinds": [
+        "issuer",
+        "instrument",
+        "official",
+        "contract",
+        "ecological"
+      ],
+      "required_label": "transition"
+    }
+  },
+  "stages": {
+    "mandate": {
+      "id": "mandate",
+      "title": "Mandate and investable question",
+      "required_sections": [
+        "decision_question",
+        "instrument_boundary",
+        "mandate_constraints"
+      ],
+      "standard_ids": [],
+      "prompt_path": "prompts/stages/mandate.md",
+      "requires_calculation": false,
+      "investment_gate": false
+    },
+    "evidence": {
+      "id": "evidence",
+      "title": "Evidence intake and reconciliation",
+      "required_sections": [
+        "source_register_review",
+        "boundary_reconciliation",
+        "material_gaps"
+      ],
+      "standard_ids": [],
+      "prompt_path": "prompts/stages/evidence.md",
+      "requires_calculation": false,
+      "investment_gate": false
+    },
+    "terms": {
+      "id": "terms",
+      "title": "Contractual terms and obligor map",
+      "required_sections": [
+        "term_sheet",
+        "recourse_and_optionalities",
+        "document_conflicts"
+      ],
+      "standard_ids": [],
+      "prompt_path": "prompts/stages/terms.md",
+      "requires_calculation": false,
+      "investment_gate": false
+    },
+    "credit": {
+      "id": "credit",
+      "title": "Underlying credit underwriting",
+      "required_sections": [
+        "repayment_capacity",
+        "refinancing_and_recovery",
+        "credit_downside"
+      ],
+      "standard_ids": [],
+      "prompt_path": "prompts/stages/credit.md",
+      "requires_calculation": false,
+      "investment_gate": false
+    },
+    "label": {
+      "id": "label",
+      "title": "Label, allocation and KPI integrity",
+      "required_sections": [
+        "framework_alignment",
+        "allocation_or_kpi_integrity",
+        "label_risk_conclusion"
+      ],
+      "standard_ids": [
+        "ICMA-GBP",
+        "ICMA-SBP",
+        "ICMA-SBG",
+        "ICMA-SLB",
+        "ICMA-QA"
+      ],
+      "prompt_path": "prompts/stages/label.md",
+      "requires_calculation": false,
+      "investment_gate": false
+    },
+    "transition": {
+      "id": "transition",
+      "title": "Transition credibility and lock-in",
+      "required_sections": [
+        "transition_plan",
+        "capex_and_lock_in",
+        "implementation_dependencies"
+      ],
+      "standard_ids": [
+        "ICMA-CTB",
+        "ICMA-QA"
+      ],
+      "prompt_path": "prompts/stages/transition.md",
+      "requires_calculation": false,
+      "investment_gate": false
+    },
+    "impact": {
+      "id": "impact",
+      "title": "Impact evidence and financial linkage",
+      "required_sections": [
+        "baseline_and_outcomes",
+        "attribution_and_verification",
+        "impact_credit_separation"
+      ],
+      "standard_ids": [
+        "ICMA-QA"
+      ],
+      "prompt_path": "prompts/stages/impact.md",
+      "requires_calculation": false,
+      "investment_gate": false
+    },
+    "market": {
+      "id": "market",
+      "title": "Instrument, liquidity and market evidence",
+      "required_sections": [
+        "market_snapshot",
+        "comparables",
+        "execution_constraints"
+      ],
+      "standard_ids": [],
+      "prompt_path": "prompts/stages/market.md",
+      "requires_calculation": false,
+      "investment_gate": false
+    },
+    "valuation": {
+      "id": "valuation",
+      "title": "Financial valuation and scenario underwriting",
+      "required_sections": [
+        "base_case",
+        "downside_and_sensitivities",
+        "priced_in_vs_variant"
+      ],
+      "standard_ids": [],
+      "prompt_path": "prompts/stages/valuation.md",
+      "requires_calculation": true,
+      "investment_gate": false
+    },
+    "expression": {
+      "id": "expression",
+      "title": "Buy-side investment expression and eligibility",
+      "required_sections": [
+        "investment_case",
+        "implementation_conditions",
+        "risk_and_falsifiers"
+      ],
+      "standard_ids": [],
+      "prompt_path": "prompts/stages/expression.md",
+      "requires_calculation": false,
+      "investment_gate": true
+    },
+    "stewardship": {
+      "id": "stewardship",
+      "title": "Stewardship and thesis monitoring",
+      "required_sections": [
+        "engagement_objectives",
+        "monitoring_triggers",
+        "escalation"
+      ],
+      "standard_ids": [],
+      "prompt_path": "prompts/stages/stewardship.md",
+      "requires_calculation": false,
+      "investment_gate": false
+    },
+    "challenge": {
+      "id": "challenge",
+      "title": "Independent challenge and release control",
+      "required_sections": [
+        "counter_case",
+        "control_review",
+        "unresolved_issues"
+      ],
+      "standard_ids": [],
+      "prompt_path": "prompts/stages/challenge.md",
+      "requires_calculation": false,
+      "investment_gate": false
+    },
+    "memo": {
+      "id": "memo",
+      "title": "Investment committee research packet",
+      "required_sections": [
+        "financial_conclusion",
+        "sustainability_conclusion",
+        "decision_conditions"
+      ],
+      "standard_ids": [],
+      "prompt_path": "prompts/stages/memo.md",
+      "requires_calculation": false,
+      "investment_gate": false
+    }
+  },
+  "demo_operation": "bond_risk",
+  "demo_arguments": {
+    "face": 100,
+    "annual_coupon": 0.05,
+    "yield_to_maturity": 0.06,
+    "years": 5,
+    "frequency": 2
+  },
+  "demo_assessment": "Fictional issuer: the bond label does not repair weaker refinancing coverage. Credit, allocation verification and spread comparability remain separate assessments.",
+  "mode": "host-driven-research",
+  "capabilities": {
+    "embedded_llm": false,
+    "live_data": false,
+    "trade_execution": false,
+    "scheduler": false
+  }
+}

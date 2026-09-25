@@ -1,0 +1,12 @@
+{
+  "version": "0.1.0",
+  "upstream_commit": "3e08518e3e75ede2a5391b4c685bbab52e0f4bb4",
+  "files": {
+    "__init__.py": "050682b274b6dc2a9991cea1a05951d3f8e4a45fa04a7390fa136626703b8022",
+    "__main__.py": "518e4c17e506cc55f92b31bc965c283e3a0d82de32ea22daac82fc65c707bb3e",
+    "demo.py": "823f8b996290eec7807943c324ddef3ef1d9abbc0a9541b8d035cc29b9c12bf1",
+    "engine.py": "081120f00967984ecc49d75b807446227563e8f37795dbea4c9aaddb7ff50202",
+    "maths.py": "906706abd834a9e2e98d2145eb44cb005c32f1d51835969426cb06321ab38209",
+    "validation.py": "40e0961e30b2a3b84773e0e90650749a1b083496d687d2a30038579d90b6bf01"
+  }
+}
