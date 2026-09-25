@@ -1,5 +1,7 @@
 # Sustainable Bond Diligence Agent
 
+[![Validate research workflow](https://github.com/HHFinAi/Sustainable-Bond-Diligence-Agent/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/HHFinAi/Sustainable-Bond-Diligence-Agent/actions/workflows/validate.yml)
+
 **Institutional-quality buy-side research, designed to support tradable investment decisions through a traceable, auditable workflow.**
 
 Separates underlying credit, contractual protections, label integrity, verified impact and relative value before a buy-side investment decision. Built by **HHFinAi** for investment analysts, fixed-income/equity specialists, portfolio managers and investment committees.
