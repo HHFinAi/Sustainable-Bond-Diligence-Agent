@@ -1,0 +1,43 @@
+{
+  "agent": "sustainable-bond-diligence-agent",
+  "version": "0.1.0",
+  "note": "Deterministic arithmetic helpers. External evidence, comparability, causality and investment conclusions require analyst review.",
+  "operations": [
+    {
+      "operation": "npv",
+      "description": "Periodic NPV; cashflows[0] is time zero."
+    },
+    {
+      "operation": "dscr",
+      "description": "Debt-service coverage ratio."
+    },
+    {
+      "operation": "scale",
+      "description": "Explicit arithmetic unit conversion."
+    },
+    {
+      "operation": "holding_period_return",
+      "description": "Holding-period return from price, income, funding and transaction costs."
+    },
+    {
+      "operation": "bond_price",
+      "description": "Coupon-date full price for regular fixed-rate option-free bonds."
+    },
+    {
+      "operation": "bond_risk",
+      "description": "Price, modified duration, convexity and DV01."
+    },
+    {
+      "operation": "slb_stepup_pv",
+      "description": "PV of extra coupons if an SLB step-up triggers."
+    },
+    {
+      "operation": "greenium",
+      "description": "Spread difference versus a matched conventional bond."
+    },
+    {
+      "operation": "allocation_coverage",
+      "description": "Eligible allocation divided by net proceeds."
+    }
+  ]
+}
