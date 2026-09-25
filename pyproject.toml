@@ -1,0 +1,11 @@
+[project]
+name = "sustainable-bond-diligence-agent"
+version = "0.1.0"
+description = "Sustainable bond diligence research workflow by HHFinAi"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{name = "HHFinAi"}]
+dependencies = []
+
+[tool.hhfinai]
+execution = "Run from repository root; wheel installation is not yet certified or required"
