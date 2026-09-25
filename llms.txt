@@ -1,0 +1,16 @@
+# Sustainable Bond Diligence Agent
+
+> Separates underlying credit, contractual protections, label integrity, verified impact and relative value before a buy-side investment decision. Institutional-quality buy-side research, designed to support tradable investment decisions through a traceable, auditable workflow.
+
+Prepared software package v0.1.0, by HHFinAi. No embedded model, live feed, automatic trade execution or independent certification. Optional navigation only; not a guaranteed indexing mechanism.
+
+## Documentation
+- [Overview](README.md)
+- [Capabilities and limits](docs/INSTITUTIONAL_QUALITY.md)
+- [Evidence lineage](docs/AUDIT.md)
+- [Research workflow](WORKFLOW.md)
+- [Method sources](references/SOURCES.md)
+- [FAQ](docs/FAQ.md)
+- [Actual validation](docs/VALIDATION.md)
+- [Synthetic sample](examples/reports/synthetic-packet.md)
+- [Incomplete primary-source study](examples/reports/source-study-packet.md)

@@ -1,0 +1,72 @@
+{
+  "register_as_of": "2026-09-24",
+  "date_precision_note": "Month-only editions use day 01 as metadata normalization, not an exact publication or legal application date.",
+  "standards": [
+    {
+      "id": "ICMA-GBP",
+      "title": "ICMA Green Bond Principles",
+      "url": "https://www.icmagroup.org/sustainable-finance/the-principles-guidelines-and-handbooks/green-bond-principles-gbp/",
+      "version": "2025 edition",
+      "source_date": "2025-06-01",
+      "checked_on": "2026-09-24",
+      "status": "VOLUNTARY_GUIDANCE",
+      "can_apply_as_current_rule": false,
+      "interpretation": "Month-level edition date normalized to the first day for metadata only. Four-component voluntary use-of-proceeds framework; legal terms require the actual instrument documents."
+    },
+    {
+      "id": "ICMA-SBP",
+      "title": "ICMA Social Bond Principles",
+      "url": "https://www.icmagroup.org/sustainable-finance/the-principles-guidelines-and-handbooks/social-bond-principles-sbp",
+      "version": "June 2025",
+      "source_date": "2025-06-01",
+      "checked_on": "2026-09-24",
+      "status": "VOLUNTARY_GUIDANCE",
+      "can_apply_as_current_rule": false,
+      "interpretation": "Reference methodology, not legal advice, certification, or evidence of issuer compliance. Verify applicability and the underlying text for each research run."
+    },
+    {
+      "id": "ICMA-SBG",
+      "title": "ICMA Sustainability Bond Guidelines",
+      "url": "https://www.icmagroup.org/sustainable-finance/the-principles-guidelines-and-handbooks/sustainability-bond-guidelines-sbg",
+      "version": "June 2021",
+      "source_date": "2021-06-01",
+      "checked_on": "2026-09-24",
+      "status": "VOLUNTARY_GUIDANCE",
+      "can_apply_as_current_rule": false,
+      "interpretation": "Reference methodology, not legal advice, certification, or evidence of issuer compliance. Verify applicability and the underlying text for each research run."
+    },
+    {
+      "id": "ICMA-SLB",
+      "title": "ICMA Sustainability-Linked Bond Principles",
+      "url": "https://www.icmagroup.org/sustainable-finance/the-principles-guidelines-and-handbooks/sustainability-linked-bond-principles-slbp",
+      "version": "2024 principles; KPI registry June 2025",
+      "source_date": "2024-06-01",
+      "checked_on": "2026-09-24",
+      "status": "VOLUNTARY_GUIDANCE",
+      "can_apply_as_current_rule": false,
+      "interpretation": "Reference methodology, not legal advice, certification, or evidence of issuer compliance. Verify applicability and the underlying text for each research run."
+    },
+    {
+      "id": "ICMA-CTB",
+      "title": "ICMA Climate Transition Bond Guidelines and Handbook",
+      "url": "https://www.icmagroup.org/sustainable-finance/the-principles-guidelines-and-handbooks/climate-transition-finance-handbook",
+      "version": "November 2025",
+      "source_date": "2025-11-01",
+      "checked_on": "2026-09-24",
+      "status": "VOLUNTARY_GUIDANCE",
+      "can_apply_as_current_rule": false,
+      "interpretation": "Reference methodology, not legal advice, certification, or evidence of issuer compliance. Verify applicability and the underlying text for each research run."
+    },
+    {
+      "id": "ICMA-QA",
+      "title": "ICMA Guidance Handbook and Q&A",
+      "url": "https://www.icmagroup.org/sustainable-finance/the-principles-guidelines-and-handbooks/guidance-handbook-and-q-and-a/",
+      "version": "June 2026",
+      "source_date": "2026-06-01",
+      "checked_on": "2026-09-24",
+      "status": "VOLUNTARY_GUIDANCE",
+      "can_apply_as_current_rule": false,
+      "interpretation": "Reference methodology, not legal advice, certification, or evidence of issuer compliance. Verify applicability and the underlying text for each research run."
+    }
+  ]
+}

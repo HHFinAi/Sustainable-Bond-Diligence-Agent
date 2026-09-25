@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "mode": "source-study",
+  "as_of": "2026-09-24",
+  "route": "green-bond",
+  "subject": {
+    "id": "EIB",
+    "name": "European Investment Bank"
+  },
+  "mandate": {
+    "objective": "Bounded historical announcement study; identify missing diligence, not an investment recommendation.",
+    "base_currency": "EUR",
+    "horizon": "Historical event viewed as of 2026-09-24",
+    "constraints": "No trading, no complete due-diligence assertion.",
+    "risk_budget": "None: source study only",
+    "jurisdiction": "Applicable jurisdictions require qualified review; not determined by this announcement."
+  },
+  "freshness_policy": {
+    "market_max_age_days": 1,
+    "standard_review_max_age_days": 90
+  },
+  "instruments": [
+    {
+      "id": "EIB-CAB-MAY2037-STUDY-ID",
+      "name": "EIB April 2025 CAB / EuGB issue; identifier unresolved in this source study",
+      "asset_type": "bond",
+      "currency": "EUR",
+      "market_access": "unknown",
+      "label": "green"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "SOURCE-1",
+      "title": "Linklaters account of EIB April 2025 European Green Bond issuance",
+      "publisher": "Linklaters, transaction counsel for joint lead managers",
+      "uri": "https://www.linklaters.com/about-us/news-and-deals/deals/2025/april/linklaters-acts-as-legal-counsel-on-the-eibs-record-breaking-3bn-european-green-bond",
+      "locator": "Opening transaction paragraphs",
+      "kind": "instrument",
+      "review_status": "REVIEWED",
+      "scope": [
+        "EIB",
+        "EIB-CAB-MAY2037-STUDY-ID"
+      ],
+      "observed_on": "2025-04-10",
+      "available_on": "2025-04-10",
+      "retrieved_on": "2026-09-24",
+      "metrics": [
+        {
+          "id": "announced-amount",
+          "value": 3000000000,
+          "unit": "EUR",
+          "period": "2025-04-10",
+          "scope": "EIB"
+        }
+      ]
+    }
+  ]
+}

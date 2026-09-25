@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "run_id": "REPLACE-FROM-NEXT",
+  "input_digest": "REPLACE-FROM-NEXT",
+  "stage_id": "mandate",
+  "status": "NEEDS_DATA",
+  "producer": {
+    "name": "Your analyst/host identity",
+    "type": "ai"
+  },
+  "summary": "Material request inputs are missing; no completion or approval asserted.",
+  "claims": [],
+  "calculations": [],
+  "standards_considered": [],
+  "sections": {},
+  "gaps": [
+    "Replace with precise missing inputs required by the stage."
+  ],
+  "issues": [],
+  "confidence": {
+    "value": 0.0,
+    "basis": "Insufficient evidence for substantive research."
+  }
+}

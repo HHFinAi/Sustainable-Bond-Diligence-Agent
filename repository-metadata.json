@@ -1,0 +1,26 @@
+{
+  "owner": "HHFinAi",
+  "suggested_name": "sustainable-bond-diligence-agent",
+  "description": "Institutional-quality buy-side sustainable bond diligence; trade-aware, traceable and auditable research workflows, evidence gates and human review.",
+  "topics": [
+    "sustainable-finance",
+    "green-bonds",
+    "social-bonds",
+    "sustainability-linked-bonds",
+    "transition-finance",
+    "fixed-income",
+    "credit-research",
+    "buy-side",
+    "ai-agents",
+    "agent-skills",
+    "investment-research",
+    "audit-trail",
+    "evidence-based",
+    "python"
+  ],
+  "publication_status": "prepared-not-published",
+  "visibility": "user-must-choose",
+  "homepage": null,
+  "brand_claim": "Institutional-quality buy-side research, designed to support tradable investment decisions through a traceable, auditable workflow.",
+  "brand_limit": "Research-process design, not independent audit certification, production validation or proof of investment performance."
+}

@@ -1,0 +1,3 @@
+stage,claim_id,kind,claim,scope,period,evidence_ids
+mandate,A1,ASSUMPTION,The request is a historical document study with no trade authorization.,EIB,2026-09-24,
+evidence,F1,FACT,"Linklaters reported an EIB EUR 3 billion European Green Bond transaction in April 2025, with maturity in May 2037.",EIB,2025-04-10,SOURCE-1

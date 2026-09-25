@@ -1,0 +1,13 @@
+{
+  "fact": "Linklaters reported an EIB EUR 3 billion European Green Bond transaction in April 2025, with maturity in May 2037.",
+  "limitations": [
+    "Transaction participant announcement, not the complete instrument contract or a current quote.",
+    "No legal-compliance opinion or present investment attractiveness established."
+  ],
+  "gaps": [
+    "Actual prospectus/final terms and verified security identifier.",
+    "Issuer financials, enforceable allocation obligations and independent allocation/impact evidence.",
+    "Current instrument-matched quotes, liquidity and relative-value analysis."
+  ],
+  "conclusion": "NEEDS_DATA: bounded historical source extraction only; contractual, outcome and current investment evidence is incomplete."
+}

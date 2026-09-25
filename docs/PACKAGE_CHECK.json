@@ -1,0 +1,8 @@
+{
+  "agent": "sustainable-bond-diligence-agent",
+  "routes": 5,
+  "stages": 13,
+  "operations": 9,
+  "checks": "PASS",
+  "remote_urls_checked": false
+}

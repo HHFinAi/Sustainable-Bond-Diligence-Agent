@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "Please cite this software and its version; citation is not an endorsement."
+title: "Sustainable Bond Diligence Agent"
+authors:
+  - name: HHFinAi
+version: 0.1.0
+date-released: 2026-09-24
+license: MIT
+abstract: "Separates underlying credit, contractual protections, label integrity, verified impact and relative value before a buy-side investment decision. Local host-driven research runtime; no trade execution or independent audit certification."
+keywords:
+  - sustainable-finance
+  - green-bonds
+  - social-bonds
+  - sustainability-linked-bonds
+  - transition-finance
+  - fixed-income
+  - credit-research
+  - buy-side
+  - ai-agents
+  - agent-skills
+  - investment-research
+  - audit-trail
+  - evidence-based
+  - python
