@@ -1,0 +1,204 @@
+{
+  "base": {
+    "annual_yield_pct": 3.1630162562059527,
+    "convexity_years_squared": 119.01332839943511,
+    "dv01_eur_per_1m_face": 990.0651642487826,
+    "dv01_per_100": 0.09900651642487826,
+    "modified_duration_years": 9.937719335609662,
+    "price_per_100": 99.62699999999988
+  },
+  "contract_status": "Final issue documents not retrieved; payment schedule, day count, redemption, optionality and legal recourse remain unverified. Material transaction-use blocker.",
+  "credit_stress": [
+    {
+      "additional_net_loss_pct_of_loan_cost": 1.0,
+      "loss_eur_million": 4378.650000000001,
+      "loss_pct_of_starting_own_funds": 5.237531155574263,
+      "own_funds_after_loss_eur_million": 79222.762,
+      "status": "ONE_OFF_STATIC_STRESS_NO_CALLABLE_CAPITAL_OR_FUTURE_PROFIT"
+    },
+    {
+      "additional_net_loss_pct_of_loan_cost": 3.0,
+      "loss_eur_million": 13135.949999999999,
+      "loss_pct_of_starting_own_funds": 15.712593466722788,
+      "own_funds_after_loss_eur_million": 70465.462,
+      "status": "ONE_OFF_STATIC_STRESS_NO_CALLABLE_CAPITAL_OR_FUTURE_PROFIT"
+    }
+  ],
+  "first_coupon_days": 36,
+  "first_coupon_per_100": 0.3082191780821918,
+  "inputs_sha256": "0b0325d5ce1e70459c4e5d112e04f6f1973347703969a46c627b1d15b3b50412",
+  "interpretation": "Computed annual yield is schedule-conditional, not verified published yield or an October 2025 market yield.",
+  "long_first_coupon_alternative": {
+    "annual_yield_pct": 3.1620650198791567,
+    "first_coupon_per_100": 3.433219178082192,
+    "first_payment_date": "2026-05-15",
+    "price_at_base_yield_per_100": 99.61757886616324,
+    "yield_difference_bps": -0.09512363267960566
+  },
+  "model_valuation_date": "2025-04-09",
+  "price_evidence_status": "PROVISIONAL: issuer search-index summary; full transaction page and signed terms not retrieved",
+  "relative_value": [
+    {
+      "additional_relative_tightening_to_break_even_bps": 0.0,
+      "carry_drag_plus_cost_bps_of_value": 0.0,
+      "hypothetical_conventional_yield_pct": 3.1630162562059527,
+      "hypothetical_green_price_per_100": 98.642837182084,
+      "hypothetical_green_yield_pct": 3.263016256205953,
+      "hypothetical_greenium_bps": -10,
+      "input_status": "PROVISIONAL_PRICE_ASSUMED_CONTRACT_TERMS",
+      "price_premium_per_100": -0.9841628179160011,
+      "status": "HYPOTHETICAL_IDENTICAL_CASHFLOWS_NOT_OBSERVED_GREENIUM",
+      "valuation_date": "2025-04-09"
+    },
+    {
+      "additional_relative_tightening_to_break_even_bps": 1.0062670983438995,
+      "carry_drag_plus_cost_bps_of_value": 10.0,
+      "hypothetical_conventional_yield_pct": 3.1630162562059527,
+      "hypothetical_green_price_per_100": 99.13344626410894,
+      "hypothetical_green_yield_pct": 3.213016256205953,
+      "hypothetical_greenium_bps": -5,
+      "input_status": "PROVISIONAL_PRICE_ASSUMED_CONTRACT_TERMS",
+      "price_premium_per_100": -0.4935537358910551,
+      "status": "HYPOTHETICAL_IDENTICAL_CASHFLOWS_NOT_OBSERVED_GREENIUM",
+      "valuation_date": "2025-04-09"
+    },
+    {
+      "additional_relative_tightening_to_break_even_bps": 2.012534196687799,
+      "carry_drag_plus_cost_bps_of_value": 20.0,
+      "hypothetical_conventional_yield_pct": 3.1630162562059527,
+      "hypothetical_green_price_per_100": 99.62699999999988,
+      "hypothetical_green_yield_pct": 3.1630162562059527,
+      "hypothetical_greenium_bps": 0,
+      "input_status": "PROVISIONAL_PRICE_ASSUMED_CONTRACT_TERMS",
+      "price_premium_per_100": -1.1368683772161603e-13,
+      "status": "HYPOTHETICAL_IDENTICAL_CASHFLOWS_NOT_OBSERVED_GREENIUM",
+      "valuation_date": "2025-04-09"
+    },
+    {
+      "additional_relative_tightening_to_break_even_bps": 3.0188012950316985,
+      "carry_drag_plus_cost_bps_of_value": 30.0,
+      "hypothetical_conventional_yield_pct": 3.1630162562059527,
+      "hypothetical_green_price_per_100": 100.12351798288746,
+      "hypothetical_green_yield_pct": 3.1130162562059525,
+      "hypothetical_greenium_bps": 5,
+      "input_status": "PROVISIONAL_PRICE_ASSUMED_CONTRACT_TERMS",
+      "price_premium_per_100": 0.4965179828874682,
+      "status": "HYPOTHETICAL_IDENTICAL_CASHFLOWS_NOT_OBSERVED_GREENIUM",
+      "valuation_date": "2025-04-09"
+    },
+    {
+      "additional_relative_tightening_to_break_even_bps": 4.025068393375598,
+      "carry_drag_plus_cost_bps_of_value": 40.0,
+      "hypothetical_conventional_yield_pct": 3.1630162562059527,
+      "hypothetical_green_price_per_100": 100.62301994725449,
+      "hypothetical_green_yield_pct": 3.0630162562059526,
+      "hypothetical_greenium_bps": 10,
+      "input_status": "PROVISIONAL_PRICE_ASSUMED_CONTRACT_TERMS",
+      "price_premium_per_100": 0.9960199472544957,
+      "status": "HYPOTHETICAL_IDENTICAL_CASHFLOWS_NOT_OBSERVED_GREENIUM",
+      "valuation_date": "2025-04-09"
+    }
+  ],
+  "research_as_of": "2025-10-16",
+  "sensitivity": [
+    {
+      "duration_convexity_return_pct": 10.532785977606839,
+      "input_status": "PROVISIONAL_PRICE_ASSUMED_CONTRACT_TERMS",
+      "pnl_eur_per_1m_face": 105206.88953576155,
+      "price_per_100": 110.14768895357615,
+      "price_return_pct": 10.560078044682818,
+      "rate_change_bps": -100,
+      "scenario": "rate_minus_100",
+      "spread_change_bps": 0,
+      "status": "SCENARIO_NOT_FORECAST",
+      "total_yield_change_bps": -100,
+      "valuation_date": "2025-04-09"
+    },
+    {
+      "duration_convexity_return_pct": 5.117626328304125,
+      "input_status": "PROVISIONAL_PRICE_ASSUMED_CONTRACT_TERMS",
+      "pnl_eur_per_1m_face": 51018.74655043531,
+      "price_per_100": 104.72887465504353,
+      "price_return_pct": 5.120975895132385,
+      "rate_change_bps": -50,
+      "scenario": "rate_minus_50",
+      "spread_change_bps": 0,
+      "status": "SCENARIO_NOT_FORECAST",
+      "total_yield_change_bps": -50,
+      "valuation_date": "2025-04-09"
+    },
+    {
+      "duration_convexity_return_pct": 0.0,
+      "input_status": "PROVISIONAL_PRICE_ASSUMED_CONTRACT_TERMS",
+      "pnl_eur_per_1m_face": -1.1368683772161603e-09,
+      "price_per_100": 99.62699999999988,
+      "price_return_pct": -1.1102230246251565e-13,
+      "rate_change_bps": 0,
+      "scenario": "base",
+      "spread_change_bps": 0,
+      "status": "SCENARIO_NOT_FORECAST",
+      "total_yield_change_bps": 0,
+      "valuation_date": "2025-04-09"
+    },
+    {
+      "duration_convexity_return_pct": -2.447238168777592,
+      "input_status": "PROVISIONAL_PRICE_ASSUMED_CONTRACT_TERMS",
+      "pnl_eur_per_1m_face": -24385.15974538106,
+      "price_per_100": 97.18848402546189,
+      "price_return_pct": -2.4476456929728996,
+      "rate_change_bps": 0,
+      "scenario": "spread_plus_25",
+      "spread_change_bps": 25,
+      "status": "SCENARIO_NOT_FORECAST",
+      "total_yield_change_bps": 25,
+      "valuation_date": "2025-04-09"
+    },
+    {
+      "duration_convexity_return_pct": -4.8200930073055375,
+      "input_status": "PROVISIONAL_PRICE_ASSUMED_CONTRACT_TERMS",
+      "pnl_eur_per_1m_face": -48053.333156557725,
+      "price_per_100": 94.82166668434422,
+      "price_return_pct": -4.82332431535204,
+      "rate_change_bps": 50,
+      "scenario": "rate_plus_50",
+      "spread_change_bps": 0,
+      "status": "SCENARIO_NOT_FORECAST",
+      "total_yield_change_bps": 50,
+      "valuation_date": "2025-04-09"
+    },
+    {
+      "duration_convexity_return_pct": -9.342652693612488,
+      "input_status": "PROVISIONAL_PRICE_ASSUMED_CONTRACT_TERMS",
+      "pnl_eur_per_1m_face": -93331.08588959149,
+      "price_per_100": 90.29389141104085,
+      "price_return_pct": -9.368051420758583,
+      "rate_change_bps": 100,
+      "scenario": "rate_plus_100",
+      "spread_change_bps": 0,
+      "status": "SCENARIO_NOT_FORECAST",
+      "total_yield_change_bps": 100,
+      "valuation_date": "2025-04-09"
+    },
+    {
+      "duration_convexity_return_pct": -13.567679058920849,
+      "input_status": "PROVISIONAL_PRICE_ASSUMED_CONTRACT_TERMS",
+      "pnl_eur_per_1m_face": -136009.98870273627,
+      "price_per_100": 86.02600112972637,
+      "price_return_pct": -13.651920533864947,
+      "rate_change_bps": 100,
+      "scenario": "rate_plus_100_spread_plus_50",
+      "spread_change_bps": 50,
+      "status": "SCENARIO_NOT_FORECAST",
+      "total_yield_change_bps": 150,
+      "valuation_date": "2025-04-09"
+    }
+  ],
+  "status": "STANDALONE_HISTORICAL_SCENARIO_NOT_RUNTIME_APPROVED",
+  "validation": {
+    "checks_passed": true,
+    "numeric_convexity_years_squared": 119.01332573181573,
+    "numeric_duration_years": 9.937719361878417,
+    "price_reconstruction_absolute_error": 1.1368683772161603e-13,
+    "scope": "Arithmetic and internal consistency only; no external model validation or human approval"
+  }
+}

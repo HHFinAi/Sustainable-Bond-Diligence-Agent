@@ -12,6 +12,14 @@ Version **0.1.0** · **13 specialist stages** · **5 routes** · Python **3.10+ 
 
 [Workflow](WORKFLOW.md) · [Prompts and skills](PROMPTS.md) · [Evidence trail](docs/AUDIT.md) · [Institutional-quality controls](docs/INSTITUTIONAL_QUALITY.md) · [Validation](docs/VALIDATION.md) · [FAQ](docs/FAQ.md)
 
+## Start with the investment case
+
+[EIB EuGB 2037: credible label, unproven entry price](examples/research/eib-eugb-2037/MEMO.md) is a real-bond historical research sample with a **16 October 2025** evidence cutoff. It includes issuer-credit analysis, allocation and impact judgments, an explicit **WATCH** conclusion, a comparator screen and reproducible duration, convexity and yield-shock calculations.
+
+The conditional model illustrates a **9.37% price decline for a +100 bp yield shock** at its original-settlement anchor. [Inspect the evidence, assumptions and model](examples/research/eib-eugb-2037/README.md). The price anchor is provisional; exact issue documents and matched historical quotes remain material gaps. This is a scoped research sample, not an approved workflow packet or a live trade recommendation.
+
+The [original source-study packet](examples/reports/source-study-packet.md) remains the `NEEDS_DATA` control. The new memo adds investment analysis alongside it, preserving the distinction between a research conclusion and workflow approval.
+
 ## What does this buy-side agent do?
 Green, social, sustainability, transition and sustainability-linked bond research. The local engine freezes the research request, prompts and methodology register; emits host work packets; validates structured evidence, units and calculations; enforces stage dependencies; archives superseded findings; invalidates downstream decisions; and records explicit human research review. It exports a committee packet, claim ledger, evidence ledger and complete JSON lineage.
 
@@ -58,8 +66,8 @@ Use the complete folder with `SKILL.md` in a filesystem-enabled agent host. Chil
 ## What makes the evidence layer auditable?
 Every numerical source claim binds to its evidence metric and original unit. Every allowlisted calculation declares input provenance and is recomputed. The run freezes adopted instructions and input metadata; revisions archive affected outputs and revoke prior review. Unknown data remains unknown, open material issues block approval, and synthetic/source-study modes cannot be research-approved. See the [claim-to-control matrix](docs/INSTITUTIONAL_QUALITY.md) for enforced versus procedural controls and missing capabilities.
 
-## Publish under HHFinAi
-These are publication-ready local files, **not a confirmation of a live GitHub repository**. Follow [GitHub Desktop setup](START_HERE_GITHUB_DESKTOP.md), choose visibility deliberately and use `repository-metadata.json` for the About description and topics. No existing repository or profile was changed. [GEO/search documentation](docs/GEO_SEO.md) uses visible content, citations and clear structure; it does not promise search rankings or AI citations.
+## Published repository and local synchronization
+The source code is published at [HHFinAi/Sustainable-Bond-Diligence-Agent](https://github.com/HHFinAi/Sustainable-Bond-Diligence-Agent). In GitHub Desktop, use **Fetch origin** and **Pull origin** before editing an existing clone. Preserve its `.git` directory and review changes on a working branch. The [Desktop guide](START_HERE_GITHUB_DESKTOP.md) covers synchronization and initial publication of a separate new copy. `repository-metadata.json` records this repository's identity, About description and topics. [GEO/search documentation](docs/GEO_SEO.md) uses visible content, citations and clear structure; it does not promise search rankings or AI citations.
 
 ## Licence, sources and limitations
 Original code, prompts and examples: MIT, Copyright 2026 HHFinAi. See [NOTICE](NOTICE.md) for upstream lineage and third-party rights. No affiliation with or endorsement by referenced standard setters or institutions. Read [method sources](references/SOURCES.md), [data requirements](docs/DATA_SOURCES.md), [security](SECURITY.md), [FAQ](docs/FAQ.md) and the actual [validation record](docs/VALIDATION.md) before use.
