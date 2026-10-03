@@ -1,32 +1,48 @@
-# Sustainable Bond Diligence Agent
+# Sustainable Bond Research and Diligence
 
-[![Validate research workflow](https://github.com/HHFinAi/Sustainable-Bond-Diligence-Agent/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/HHFinAi/Sustainable-Bond-Diligence-Agent/actions/workflows/validate.yml)
+**Investment research by HHFinAi: underlying credit, contractual protections, sustainability claims and relative value.**
 
-**Institutional-quality buy-side research, designed to support tradable investment decisions through a traceable, auditable workflow.**
-
-Separates underlying credit, contractual protections, label integrity, verified impact and relative value before a buy-side investment decision. Built by **HHFinAi** for investment analysts, fixed-income/equity specialists, portfolio managers and investment committees.
-
-**Institutional quality describes the designed process controls—not independent audit certification, production readiness, client adoption or guaranteed investment accuracy.** “Tradable” requires a verified investment instrument and appropriate market, legal and portfolio evidence; many private projects and programmes are not liquid or investable. “Auditable” means inspectable local records, not authenticated or tamper-proof recordkeeping. No trade execution is provided.
-
-Version **0.1.0** · **13 specialist stages** · **5 routes** · Python **3.10+ target** · **Human review**
-
-[Workflow](WORKFLOW.md) · [Prompts and skills](PROMPTS.md) · [Evidence trail](docs/AUDIT.md) · [Institutional-quality controls](docs/INSTITUTIONAL_QUALITY.md) · [Validation](docs/VALIDATION.md) · [FAQ](docs/FAQ.md)
+A credible label does not establish a good bond investment. What does the investor own, how is repayment supported, and is the entry price defensible?
 
 ## Start with the investment case
 
-[EIB EuGB 2037: credible label, unproven entry price](examples/research/eib-eugb-2037/MEMO.md) is a real-bond historical research sample with a **16 October 2025** evidence cutoff. It includes issuer-credit analysis, allocation and impact judgments, an explicit **WATCH** conclusion, a comparator screen and reproducible duration, convexity and yield-shock calculations.
+### EIB EuGB 2037 — credible label, unproven entry price
 
-The conditional model illustrates a **9.37% price decline for a +100 bp yield shock** at its original-settlement anchor. [Inspect the evidence, assumptions and model](examples/research/eib-eugb-2037/README.md). The price anchor is provisional; exact issue documents and matched historical quotes remain material gaps. This is a scoped research sample, not an approved workflow packet or a live trade recommendation.
+**Research assessment: WATCH.** The case separates issuer credit, allocation and impact evidence, contractual questions and the comparator screen. It does not treat a sustainability credential as a substitute for credit analysis or matched market evidence.
 
-The [original source-study packet](examples/reports/source-study-packet.md) remains the `NEEDS_DATA` control. The new memo adds investment analysis alongside it, preserving the distinction between a research conclusion and workflow approval.
+**Status:** historical real-bond research sample with an evidence cutoff of **16 October 2025**. It is not a live recommendation or an approved workflow packet. Exact issue documents and matched historical quotes remain material gaps.
 
-## What does this buy-side agent do?
-Green, social, sustainability, transition and sustainability-linked bond research. The local engine freezes the research request, prompts and methodology register; emits host work packets; validates structured evidence, units and calculations; enforces stage dependencies; archives superseded findings; invalidates downstream decisions; and records explicit human research review. It exports a committee packet, claim ledger, evidence ledger and complete JSON lineage.
+The conditional model illustrates a **9.37% price decline for a +100 bp yield shock** at its original-settlement anchor. That anchor is provisional: the result is a scoped sensitivity, not a current price forecast.
 
-The host AI or human performs the actual research through separately authorized tools. **No embedded LLM, live data feed, automatic source extraction, scheduler or broker connection is included.** Synthetic demonstrations test workflow mechanics; they do not run live investment analysis. The incomplete primary-source study demonstrates safe stopping, not completed diligence.
+[Read the investment memo](examples/research/eib-eugb-2037/MEMO.md) · [Inspect sources, assumptions and reproduction instructions](examples/research/eib-eugb-2037/README.md)
 
-## Choose a research route
-| Route | Stages | Asset types |
+## Research judgment demonstrated
+
+The case asks whether the evidence supports the investment, not merely whether the security has a sustainability label. It makes the distinction between a research conclusion and workflow approval explicit, preserves unresolved instrument and pricing questions, and supplies reproducible duration, convexity and yield-shock calculations.
+
+The research record identifies the sources, assumptions and limits to review. It is not a claim of independent audit, client adoption, historical investment performance or authenticated human approval. [Selected research and portfolio standards](https://github.com/HHFinAi/HHFinAi).
+
+## Research examples and control demonstrations
+
+| Material | Purpose | Boundary |
+|---|---|---|
+| [EIB research sample](examples/research/eib-eugb-2037/MEMO.md) | Historical issuer, instrument and relative-value assessment | Material gaps remain; not a live trade |
+| [Methodology-only source study](examples/reports/source-study-packet.md) | Shows how the workflow stops safely | Deliberately `NEEDS_DATA` |
+| [Synthetic packet](examples/reports/synthetic-packet.md) | Exercises software and output structure | Fictional inputs; not completed diligence |
+
+The source study remains unchanged. Publishing a standalone memo does not approve an incomplete workflow run.
+
+## Workflow infrastructure
+
+**Engine v0.1.0 · 13 specialist stages · 5 routes · Python 3.10+ target · Human review · No trade execution**
+
+[Workflow](WORKFLOW.md) · [Prompts and skills](PROMPTS.md) · [Evidence trail](docs/AUDIT.md) · [Controls](docs/INSTITUTIONAL_QUALITY.md) · [Validation](docs/VALIDATION.md) · [FAQ](docs/FAQ.md)
+
+The local engine freezes the request, instructions and methodology register; emits host work packets; validates structured evidence, units and calculations; enforces stage dependencies; archives superseded findings; invalidates downstream decisions; and exports the committee packet and evidence lineage.
+
+A human or separately authorized AI host performs the actual research. There is **no embedded LLM, live market feed, automatic source extraction, scheduler or broker connection**. Research-process controls do not establish source truth or investment accuracy.
+
+| Route | Stages | Asset type |
 |---|---:|---|
 | `green-bond` | 12 | bond |
 | `social-bond` | 12 | bond |
@@ -34,8 +50,9 @@ The host AI or human performs the actual research through separately authorized 
 | `sustainability-linked-bond` | 12 | bond |
 | `transition-bond` | 13 | bond |
 
-## Run the tested local workflow
-From this repository's root, with Python 3.10 or later:
+## Run the local workflow
+
+From the repository root:
 
 ```bash
 python3 -m unittest discover -s tests -v
@@ -47,27 +64,30 @@ python3 -m sf_agent export --run runs/demo-01 --out exports/demo-01
 python3 -m sf_agent source-study --out runs/source-study-01
 ```
 
-No third-party runtime packages, credentials or network access are required for these commands. Use a fresh output directory each time. The `source-study` command deliberately returns a NEEDS_DATA research status because material evidence is absent; that is the intended control demonstration, not an analysis to trade on. Process exit 0 means the command ran, not that the investment research is approved.
-
-## Inspect actual example outputs
-[Synthetic packet](examples/reports/synthetic-packet.md) · [Incomplete historical source study](examples/reports/source-study-packet.md) · [Calculation input](examples/calculation-arguments.json)
+These commands require no third-party runtime packages, credentials or network access. Use fresh output directories. The demo uses deterministic fixtures, not live research. A source-study process exit of 0 means the command ran, not that diligence is complete; its research result remains `NEEDS_DATA`.
 
 ```bash
 python3 -m sf_agent calc --operation bond_risk --arguments examples/calculation-arguments.json --currency USD
 ```
 
-The calculation is illustrative and uses explicit assumptions. See [methodology and operation boundaries](docs/METHODOLOGY.md). The test suite is not evidence of investment alpha, impact causality, regulatory compliance or current trade suitability.
+[Calculation inputs](examples/calculation-arguments.json) · [Method and operation boundaries](docs/METHODOLOGY.md).
 
-## Use the prompts for real research
-Start with `examples/research-request-template.json`, replace every placeholder, identify actual instruments, register reviewed permitted evidence and set explicit freshness policies. Follow the [host workflow](WORKFLOW.md) and [artifact guide](templates/host-artifact-guide.md). `next` emits the stage contract and upstream evidence context; submit actual research artifacts using the latest revision. Do not use deterministic fixtures to complete a research run.
+## Conduct actual research
 
-Use the complete folder with `SKILL.md` in a filesystem-enabled agent host. Child skills are under `skills/`. Host installation/activation is not certified, and copying a prompt into a text-only chat does not enforce the Python state machine. Do not call the human approval command from an autonomous host agent.
+Replace all placeholders in `examples/research-request-template.json`, identify the actual instruments, register permitted evidence and set explicit freshness policies. Follow [the host workflow](WORKFLOW.md) and [artifact guide](templates/host-artifact-guide.md). `next` emits the stage contract and upstream evidence context; submit researched artifacts using the latest revision. Do not substitute fixtures for research.
 
-## What makes the evidence layer auditable?
-Every numerical source claim binds to its evidence metric and original unit. Every allowlisted calculation declares input provenance and is recomputed. The run freezes adopted instructions and input metadata; revisions archive affected outputs and revoke prior review. Unknown data remains unknown, open material issues block approval, and synthetic/source-study modes cannot be research-approved. See the [claim-to-control matrix](docs/INSTITUTIONAL_QUALITY.md) for enforced versus procedural controls and missing capabilities.
+Use `SKILL.md` with the complete adjacent folder in a filesystem-enabled agent host. Child skills are under `skills/`. Copying prompts into a text-only chat does not enforce the Python state machine. Host installation and activation are not certified. An autonomous host must not call the human approval command.
 
-## Published repository and local synchronization
-The source code is published at [HHFinAi/Sustainable-Bond-Diligence-Agent](https://github.com/HHFinAi/Sustainable-Bond-Diligence-Agent). In GitHub Desktop, use **Fetch origin** and **Pull origin** before editing an existing clone. Preserve its `.git` directory and review changes on a working branch. The [Desktop guide](START_HERE_GITHUB_DESKTOP.md) covers synchronization and initial publication of a separate new copy. `repository-metadata.json` records this repository's identity, About description and topics. [GEO/search documentation](docs/GEO_SEO.md) uses visible content, citations and clear structure; it does not promise search rankings or AI citations.
+## Evidence controls and limitations
 
-## Licence, sources and limitations
-Original code, prompts and examples: MIT, Copyright 2026 HHFinAi. See [NOTICE](NOTICE.md) for upstream lineage and third-party rights. No affiliation with or endorsement by referenced standard setters or institutions. Read [method sources](references/SOURCES.md), [data requirements](docs/DATA_SOURCES.md), [security](SECURITY.md), [FAQ](docs/FAQ.md) and the actual [validation record](docs/VALIDATION.md) before use.
+Numerical claims bind to evidence metrics and original units. Allowlisted calculations declare provenance and are recomputed. Revisions archive affected outputs and revoke prior review. Unknown data remains unknown; material open issues block approval. Demo and source-study modes cannot be research-approved.
+
+Inspectable local records are not tamper-proof, and reviewer attestations are not authenticated identities. The engine does not certify source truth, legal compliance, impact causality, current trade suitability, production security or investment alpha. Many projects and programmes are not liquid or investable. Read the [enforced-versus-procedural control map](docs/INSTITUTIONAL_QUALITY.md).
+
+## Maintenance, sources and licence
+
+The original engine, research case, numerical results and approval controls are preserved. In GitHub Desktop, fetch and pull before editing an existing clone, preserve `.git` and review changes on a working branch.
+
+[Desktop guide](START_HERE_GITHUB_DESKTOP.md) · [Repository metadata](repository-metadata.json) · [Discoverability](docs/GEO_SEO.md) · [Method sources](references/SOURCES.md) · [Data requirements](docs/DATA_SOURCES.md) · [Security](SECURITY.md)
+
+Original code, prompts and examples: MIT, Copyright 2026 HHFinAi. Third-party sources retain their rights. No affiliation with or endorsement by referenced institutions or standard setters is implied. [Licence](LICENSE) · [Notices](NOTICE.md).
