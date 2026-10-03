@@ -1,0 +1,64 @@
+{
+  "assumptions": [
+    {
+      "id": "A01",
+      "category": "contract_model",
+      "assumption": "Option-free bullet; redemption100; zero accrued at original settlement; no business-day adjustment",
+      "value": "100 / option-free / no date adjustment",
+      "units": "per 100 face; dates unadjusted",
+      "rationale": "Bounded original-settlement risk illustration pending issue-specific terms",
+      "sensitivity": "Optionality or redemption changes would require a different model",
+      "status": "UNVERIFIED_MATERIAL_FOR_TRANSACTION_USE"
+    },
+    {
+      "id": "A02",
+      "category": "cash_flow_schedule",
+      "assumption": "Annual15May; first payment15May2025; short coupon36/365; fractional annual discount exponent",
+      "value": "36/365; 3.125 annual coupon per100 thereafter",
+      "units": "years; coupon per100",
+      "rationale": "Coupon and maturity are sourced; first payment, fraction and calendar are assumptions",
+      "sensitivity": "Alternate first payment15May2026 with long coupon calculated separately",
+      "status": "UNVERIFIED_MATERIAL_FOR_TRANSACTION_USE"
+    },
+    {
+      "id": "A03",
+      "category": "valuation",
+      "assumption": "Single annually compounded discount yield; rate and spread shocks add in parallel",
+      "value": "price anchor99.627; shock grid minus100 to plus150bp",
+      "units": "price per100; basis points of annual yield",
+      "rationale": "Transparent duration/convexity risk calculation; no observed spread curve available",
+      "sensitivity": "Not a key-rate, OAS, default or holding-period total-return model",
+      "status": "ANALYST_MODEL_CHOICE"
+    },
+    {
+      "id": "A04",
+      "category": "relative_value",
+      "assumption": "Hypothetical comparator has identical cash flows and rate exposure; greenium=conventional yield-green yield",
+      "value": "-10,-5,0,5,10",
+      "units": "basis points of annual yield",
+      "rationale": "Isolate price mechanics without inventing market observations",
+      "sensitivity": "Real comparator coupon, maturity, liquidity and curve differences must be adjusted",
+      "status": "HYPOTHETICAL_NOT_OBSERVED"
+    },
+    {
+      "id": "A05",
+      "category": "relative_value_policy",
+      "assumption": "Two-year horizon;20bp incremental round-trip cost of green position versus comparator; constant duration; no roll-down",
+      "value": "2 years;20bp cost; default maximum yield concession0bp",
+      "units": "years; basis points of market value for cost; basis points of yield for concession",
+      "rationale": "Explicit hurdle for evaluating a proposed label premium; no expected compression embedded",
+      "sensitivity": "Recalculate with executable costs, actual curves, mandate and holding period",
+      "status": "ILLUSTRATIVE_POLICY_NOT_CLIENT_MANDATE"
+    },
+    {
+      "id": "A06",
+      "category": "credit_stress",
+      "assumption": "Additional one-off net losses of1% or3% of2024 loans at cost reduce own funds one-for-one",
+      "value": "0.01,0.03",
+      "units": "fraction of loan book at cost",
+      "rationale": "Show static loss-absorption scale with no credit for future profits, capital calls or recoveries",
+      "sensitivity": "No risk-weighted-asset, regulatory-capital, funding, guarantee or correlation model",
+      "status": "STRESS_NOT_FORECAST"
+    }
+  ]
+}

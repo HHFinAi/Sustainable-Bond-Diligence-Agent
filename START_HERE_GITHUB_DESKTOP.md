@@ -1,23 +1,20 @@
-# Publish with GitHub Desktop — HHFinAi only
+# GitHub Desktop: synchronize this repository or publish a new copy
 
-These files are prepared locally; no remote repository, topic, profile or GitHub Pages change was made during this build. Review the package and run the checks before publishing. Do not upload run folders, confidential source documents, API keys or the ZIP archive itself.
+The source code is already published at [HHFinAi/Sustainable-Bond-Diligence-Agent](https://github.com/HHFinAi/Sustainable-Bond-Diligence-Agent). Use the existing-repository workflow below for updates. The new-copy section applies only when you deliberately create a separate repository.
 
-1. Extract the repository folder from its ZIP. In GitHub Desktop, confirm the active GitHub account is **HHFinAi**, not hh-health-AI. Select **File → New Repository** and use the exact suggested repository name in `repository-metadata.json`.
-2. Choose a local parent directory so GitHub Desktop creates a new empty repository folder. Copy the extracted package's contents into that folder, including `.github`, `.gitignore` and `.gitattributes`. Keep the `.git` directory created by GitHub Desktop. Avoid accidentally nesting the entire package one level too deep: `README.md` and `sf_agent/` must be at the repository root.
-3. Confirm repository-specific author identity in Git settings. Use your verified HHFinAi email or the exact GitHub-provided noreply address from your account settings. Do not invent an email or copy hh-health-AI attribution. Review the complete changes and commit with `Initial HHFinAi sustainable-finance agent v0.1.0`.
-4. Click **Publish repository**, verify owner **HHFinAi**, and choose visibility deliberately. Public visibility is required for public search discovery; do not make anything public solely because this guide contains GEO metadata. No visibility change is automatic.
-5. In the GitHub repository's About settings, paste the prepared description and topics from `repository-metadata.json`. Review the GitHub Actions result after publication; the included workflow has only been run locally here, not on your GitHub account. The static HTML page is optional and is not automatically deployed.
+## Work with the existing repository
 
-For an already existing repository, fetch/pull first and copy only intended package files. Do not replace `.git`, force-push, delete history or overwrite unrelated content. The packages are self-contained and do not require the existing climate repository to be modified. A full desktop publication walkthrough has not been tested on your machine; menu labels may vary by app version.
+1. Select this repository in GitHub Desktop. If you do not have a clone, choose **File → Clone Repository**, enter `https://github.com/HHFinAi/Sustainable-Bond-Diligence-Agent`, and select a new local folder.
+2. Save or commit your local work, then use **Fetch origin** and **Pull origin** when changes are available. Resolve any conflicts before making further edits. Create a working branch for the update.
+3. Copy only the reviewed files you intend to change. Keep the existing `.git` directory, history and unrelated content. Never replace `.git`, copy another clone's `.git`, or force-push to synchronize a downloaded package. Keep relevant `.github`, `.gitignore` and `.gitattributes` files with the project.
+4. Run the checks documented in [README](README.md). Review the diff, confirm the Git author identity for HHFinAi, commit and push the branch, then open a pull request for review. Check the repository's [Actions results](https://github.com/HHFinAi/Sustainable-Bond-Diligence-Agent/actions) for the commit being reviewed.
 
-## Local verification
-From the repository root, run:
+## Initial publication of a separate new copy
 
-```bash
-python3 -m unittest discover -s tests -v
-python3 scripts/check_repository.py
-python3 -m sf_agent demo --out runs/first-demo
-python3 -m sf_agent report --run runs/first-demo
-```
+1. Confirm the intended GitHub account and choose an unused repository name. Use a new empty directory; do not repeat this step against the existing repository above.
+2. Create a new local repository in GitHub Desktop. Copy the source files into its root, including `.github`, `.gitignore` and `.gitattributes`, while preserving the `.git` directory created for the new repository. Do not upload a ZIP in place of the source files or nest the whole project an extra level deep.
+3. Update `repository-metadata.json` and repository links to describe the new owner/name. Before publication, use `publication_status: prepared-not-published`; after verifying the new remote, record `publication_status: published`, its actual `repository_name`, `repository_url`, visibility and verification date. The offline checker validates declarations, not live GitHub state.
+4. Review the files and run the checks. Confirm the author name and verified email or GitHub-provided noreply address. Choose **Publish repository**, verify the owner/name, and select visibility deliberately. No visibility change is automatic.
+5. Use the description and relevant topics in `repository-metadata.json` for the new repository's About settings. Inspect its Actions results after publication. Optional `docs/index.html` is a static source page; repository publication does not configure a hosted website or deploy an AI service.
 
-Use a new run directory for each demo. On systems where Python 3 is invoked as `python`, substitute that command. Runtime target: Python 3.10+; inspect `docs/VALIDATION.md` for the version actually tested.
+Keep confidential evidence, run folders, credentials and licensed data outside public commits. GitHub Desktop menu labels can vary by version. See [GitHub Desktop documentation](https://docs.github.com/en/desktop) for the current interface.

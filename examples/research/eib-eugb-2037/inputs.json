@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "research_as_of": "2025-10-16",
+  "research_prepared_on": "2026-10-03",
+  "instrument": {
+    "issuer": "European Investment Bank",
+    "isin": "EU000A3K4EG9",
+    "currency": "EUR",
+    "coupon_rate": 0.03125,
+    "issue_amount_eur": 3000000000,
+    "pricing_date": "2025-04-02",
+    "settlement_date": "2025-04-09",
+    "maturity_date": "2037-05-15",
+    "reported_reoffer_price_per_100": 99.627,
+    "price_evidence_status": "PROVISIONAL: issuer search-index summary; full transaction page and signed terms not retrieved",
+    "source_ids": ["S01", "S02", "S03"]
+  },
+  "model_assumptions": {
+    "valuation_date": "2025-04-09",
+    "face_value": 100.0,
+    "redemption_per_100": 100.0,
+    "first_coupon_date": "2025-05-15",
+    "annual_coupon_month": 5,
+    "annual_coupon_day": 15,
+    "frequency_per_year": 1,
+    "stub_reference_start": "2024-05-15",
+    "stub_reference_end": "2025-05-15",
+    "stub_method": "actual days / actual days in assumed annual reference period; fractional annual discount exponent",
+    "short_first_coupon": true,
+    "option_free_bullet": true,
+    "business_day_adjustments": false,
+    "accrued_interest_at_original_settlement": 0.0,
+    "assumption_ids": ["A01", "A02", "A03"]
+  },
+  "relative_value_assumptions": {
+    "holding_period_years": 2.0,
+    "round_trip_cost_bps_of_value": 20.0,
+    "hypothetical_greenium_bps": [-10, -5, 0, 5, 10],
+    "definition": "Hypothetical conventional yield minus green yield; positive means lower green yield and a higher green price. No observed comparator quote.",
+    "assumption_ids": ["A04", "A05"]
+  },
+  "credit_inputs_eur_million": {
+    "loan_book_at_cost_2024": 437865.0,
+    "own_funds_2024": 83601.412,
+    "additional_net_loss_fractions": [0.01, 0.03],
+    "source_ids": ["S04"],
+    "assumption_ids": ["A06"]
+  }
+}
