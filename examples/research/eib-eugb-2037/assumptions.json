@@ -59,6 +59,46 @@
       "rationale": "Show static loss-absorption scale with no credit for future profits, capital calls or recoveries",
       "sensitivity": "No risk-weighted-asset, regulatory-capital, funding, guarantee or correlation model",
       "status": "STRESS_NOT_FORECAST"
+    },
+    {
+      "id": "A07",
+      "category": "dated_holding_period",
+      "assumption": "Settlement 20 October 2025 and exit 20 October 2027; green annual 15 May / conventional annual 15 October; assumed Actual/Actual reference-period accrued interest; option-free redemption at 100; dates unadjusted",
+      "value": "Dates in holding-period-inputs.json",
+      "units": "calendar dates; per 100 face",
+      "rationale": "Use dated cash flows and clean/dirty accounting without declaring unverified legal terms. Comparator schedule anchor dates are model anchors, not original issue dates.",
+      "sensitivity": "Actual issue terms, holidays, ex-coupon rules and payment adjustment can change settlement economics",
+      "status": "UNVERIFIED_MATERIAL_FOR_TRANSACTION_USE"
+    },
+    {
+      "id": "A08",
+      "category": "curve_and_spread",
+      "assumption": "Illustrative ACT/365F continuously compounded zero curve; linear zero interpolation without extrapolation; conventional flat z-spread 50bp; greenium is conventional minus green z-spread",
+      "value": "Explicit zero nodes, spreads and shocks in holding-period-inputs.json",
+      "units": "decimal continuous zero rates; bp of continuous z-spread",
+      "rationale": "Adjust different coupons and maturities on a common assumed curve. No historical curve fitted and no observed greenium measured.",
+      "sensitivity": "Parallel rate, slope and common EIB spread shocks; residual key-rate differences disclosed",
+      "status": "ANALYST_SCENARIO_NOT_MARKET_DATA"
+    },
+    {
+      "id": "A09",
+      "category": "costs_and_cash",
+      "assumption": "Green entry/exit each 15bp of dirty value; conventional each 5bp; coupons reinvested and signed benchmark cash/funding balance earns/pays 2.5% continuous",
+      "value": "15/15 vs 5/5 bp; 0.025 continuous rates",
+      "units": "bp of dirty market value; decimal annual continuous rates",
+      "rationale": "Explicit incremental costs and dated cash balances; no observed bid/offer, financing advantage or tax benefit",
+      "sensitivity": "Substitute matched observed executable costs and actual funding/reinvestment; benchmark can include a financing requirement",
+      "status": "ILLUSTRATIVE_NOT_EXECUTABLE"
+    },
+    {
+      "id": "A10",
+      "category": "comparison_method",
+      "assumption": "Match initial parallel curve DV01 via comparator face and disclose remaining key-rate risk; static residual-tenor curve vs initial implied-forward curve separates carry and roll-down",
+      "value": "Finite-difference DV01 and full cash-flow holding-period decomposition",
+      "units": "per 100 green face; return bp of green initial outlay",
+      "rationale": "Avoid treating equal face or similar maturity as equal rate exposure; nonparallel curve risk remains",
+      "sensitivity": "Two bonds alone cannot neutralize all key rates; rate-first spread-second decomposition is order-dependent",
+      "status": "MODEL_CHOICE_NOT_HEDGE_RECOMMENDATION"
     }
   ]
 }

@@ -13,7 +13,7 @@ Evidence IDs, locators, dated source records, typed claims, unit-aware calculati
 Its CLI, calculations, validation and synthetic demos run locally without a key or network access. Actual research requires a host AI or human with separately authorized source tools. The package does not contain an embedded LLM or automatic web/document retrieval. Text-only use of the prompts does not enforce Python gates.
 
 ## Are the example reports live investment recommendations?
-No. Synthetic examples are fictional. The historical primary-source study replays a limited announcement extraction and intentionally stops on material gaps. No present-day attractiveness, impact verification, expected return or execution recommendation is established.
+No. The [EIB EuGB 2037 case](../examples/research/eib-eugb-2037/MEMO.md) is a dated real-instrument research memo with a [source register and reproduction guide](../examples/research/eib-eugb-2037/README.md). It separates verified terms, conditional calculations and unavailable matched market evidence; publishing it does not approve a workflow packet or authorize execution. Synthetic examples are fictional. The separate historical source-study replay intentionally stops on material gaps. None establishes present-day attractiveness or investment performance.
 
 ## Which AI platform is supported?
 The instructions are portable text with a root SKILL.md and bounded child skills. A filesystem-enabled host that can read the package and run Python can follow the workflow. Specific products, automatic activation, installation and provider integrations have not been certified or integration-tested.

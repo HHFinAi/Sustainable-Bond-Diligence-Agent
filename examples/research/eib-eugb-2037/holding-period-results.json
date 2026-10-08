@@ -1,0 +1,529 @@
+{
+  "conventions": {
+    "cash": "Coupons reinvested at assumed continuous rate; signed benchmark cash balance earns/pays assumed funding rate",
+    "cost": "Entry cost on entry dirty value and exit cost on exit dirty value; both sides explicit",
+    "coupon_accrual": "ASSUMED Actual/Actual annual coupon reference periods",
+    "curve_discounting": "ACT/365F continuous zero rate plus flat continuous z-spread",
+    "rate_spread_order": "Rate/slope move first, then spread move; nonlinear decomposition is order-dependent",
+    "risk_matching": "Equal initial parallel curve DV01; residual key-rate exposure is disclosed",
+    "roll_down": "Static residual-tenor curve price less time-zero implied-forward curve price at the horizon; spread held constant"
+  },
+  "entry_hurdles": [
+    {
+      "additional_relative_tightening_bps": 1.545362095959229,
+      "excess_pnl_at_hurdle_per_100": -9.769962616701378e-15,
+      "initial_greenium_bps": 0,
+      "required_terminal_greenium_bps": 1.545362095959229
+    },
+    {
+      "additional_relative_tightening_bps": 2.7952253589083256,
+      "excess_pnl_at_hurdle_per_100": -1.7763568394002505e-15,
+      "initial_greenium_bps": 5,
+      "required_terminal_greenium_bps": 7.795225358908326
+    },
+    {
+      "additional_relative_tightening_bps": 4.0435499705264775,
+      "excess_pnl_at_hurdle_per_100": 1.7763568394002505e-15,
+      "initial_greenium_bps": 10,
+      "required_terminal_greenium_bps": 14.043549970526477
+    }
+  ],
+  "exit_settlement_date_assumption": "2027-10-20",
+  "input_classification": "All curves, spreads, quotes in scenario pricing, funding rates, costs and unverified contract conventions are labelled assumptions",
+  "inputs_sha256": "cdd30538f0cc77a1058442462238aa0964c95b279dee85dc23217e1bef2b2a2b",
+  "key_rate_residuals": [
+    {
+      "green_dv01_per_100": 0.0,
+      "matched_conventional_dv01_per_100_green": 0.0,
+      "residual_dv01_per_100_green": 0.0,
+      "tenor_years": 0
+    },
+    {
+      "green_dv01_per_100": 0.00015121958580266437,
+      "matched_conventional_dv01_per_100_green": 9.791868339766766e-06,
+      "residual_dv01_per_100_green": 0.0001414277174628976,
+      "tenor_years": 0.5
+    },
+    {
+      "green_dv01_per_100": 0.00022663551128232484,
+      "matched_conventional_dv01_per_100_green": 0.0003571894972395631,
+      "residual_dv01_per_100_green": -0.00013055398595723827,
+      "tenor_years": 1
+    },
+    {
+      "green_dv01_per_100": 0.0005875952177873955,
+      "matched_conventional_dv01_per_100_green": 0.0007008064370717028,
+      "residual_dv01_per_100_green": -0.00011321121928430729,
+      "tenor_years": 2
+    },
+    {
+      "green_dv01_per_100": 0.0014125834020433103,
+      "matched_conventional_dv01_per_100_green": 0.0016833089547938483,
+      "residual_dv01_per_100_green": -0.0002707255527505379,
+      "tenor_years": 3
+    },
+    {
+      "green_dv01_per_100": 0.0026659106979920466,
+      "matched_conventional_dv01_per_100_green": 0.0031719206342827474,
+      "residual_dv01_per_100_green": -0.0005060099362907008,
+      "tenor_years": 5
+    },
+    {
+      "green_dv01_per_100": 0.004481110428230295,
+      "matched_conventional_dv01_per_100_green": 0.0053217647315835824,
+      "residual_dv01_per_100_green": -0.0008406543033532875,
+      "tenor_years": 7
+    },
+    {
+      "green_dv01_per_100": 0.05972278467151426,
+      "matched_conventional_dv01_per_100_green": 0.05262518411355382,
+      "residual_dv01_per_100_green": 0.007097600557960444,
+      "tenor_years": 10
+    },
+    {
+      "green_dv01_per_100": 0.02530716237397712,
+      "matched_conventional_dv01_per_100_green": 0.03068503401446907,
+      "residual_dv01_per_100_green": -0.0053778716404919505,
+      "tenor_years": 15
+    }
+  ],
+  "quote_gate": {
+    "comparison_timezone": "Europe/Paris",
+    "entry_recommendation": null,
+    "historical_cut": "2025-10-16",
+    "maximum_timestamp_gap_seconds_policy_cap": 60,
+    "reasons": [
+      "Issue-specific contractual terms and comparator equivalence remain unverified",
+      "green: dated timezone-aware quote missing",
+      "green: positive finite bid_clean missing",
+      "green: positive finite ask_clean missing",
+      "green: positive finite bid_size_eur missing",
+      "green: positive finite ask_size_eur missing",
+      "green: EUR clean-price convention unverified",
+      "green: executable reviewed two-way evidence missing",
+      "green: source and locator missing",
+      "green: settlement date missing",
+      "conventional: dated timezone-aware quote missing",
+      "conventional: positive finite bid_clean missing",
+      "conventional: positive finite ask_clean missing",
+      "conventional: positive finite bid_size_eur missing",
+      "conventional: positive finite ask_size_eur missing",
+      "conventional: EUR clean-price convention unverified",
+      "conventional: executable reviewed two-way evidence missing",
+      "conventional: source and locator missing",
+      "conventional: settlement date missing"
+    ],
+    "required_quote_date": "2025-10-16",
+    "scope": "Field and chronology checks only; source authenticity, legal equivalence and liquidity require review",
+    "status": "NEEDS_DATA"
+  },
+  "quote_packet_analysis": {
+    "gate": {
+      "comparison_timezone": "Europe/Paris",
+      "entry_recommendation": null,
+      "historical_cut": "2025-10-16",
+      "maximum_timestamp_gap_seconds_policy_cap": 60,
+      "reasons": [
+        "Issue-specific contractual terms and comparator equivalence remain unverified",
+        "green: dated timezone-aware quote missing",
+        "green: positive finite bid_clean missing",
+        "green: positive finite ask_clean missing",
+        "green: positive finite bid_size_eur missing",
+        "green: positive finite ask_size_eur missing",
+        "green: EUR clean-price convention unverified",
+        "green: executable reviewed two-way evidence missing",
+        "green: source and locator missing",
+        "green: settlement date missing",
+        "conventional: dated timezone-aware quote missing",
+        "conventional: positive finite bid_clean missing",
+        "conventional: positive finite ask_clean missing",
+        "conventional: positive finite bid_size_eur missing",
+        "conventional: positive finite ask_size_eur missing",
+        "conventional: EUR clean-price convention unverified",
+        "conventional: executable reviewed two-way evidence missing",
+        "conventional: source and locator missing",
+        "conventional: settlement date missing",
+        "green: supplied pricing terms remain unverified; provide reviewed issue-specific --inputs",
+        "conventional: supplied pricing terms remain unverified; provide reviewed issue-specific --inputs"
+      ],
+      "required_quote_date": "2025-10-16",
+      "scope": "Field and chronology checks only; source authenticity, legal equivalence and liquidity require review",
+      "status": "NEEDS_DATA"
+    },
+    "holding_period_projection": null,
+    "pricing": null,
+    "status": "NEEDS_DATA"
+  },
+  "quote_request_sha256": "04cb2831ce15d9355d69355b105a30093b3fa0f40e86d50ac08396d28002010b",
+  "research_as_of": "2025-10-16",
+  "scenarios": [
+    {
+      "benchmark_cash_balance_per_100_green": 0.871713277853047,
+      "benchmark_cash_interest_or_financing_cost_per_100_green": 0.04469369548106346,
+      "common_eib_spread_shift_bps": 0,
+      "conventional": {
+        "components": {
+          "carry_forward_curve_per_100": 5.9744147523070055,
+          "rate_curve_change_per_100": 0.0,
+          "spread_change_after_rate_shift_per_100": 0.0,
+          "static_curve_roll_down_per_100": 2.207057635578977,
+          "transaction_cost_per_100": -0.10405949468832157
+        },
+        "coupon_cash_per_100": 8.0,
+        "coupon_reinvestment_per_100": 0.10403536149586756,
+        "entry_accrued_per_100": 0.0547945205479452,
+        "entry_clean_per_100": 103.96598165457857,
+        "entry_cost_per_100": 0.05201038808756325,
+        "entry_dirty_per_100": 104.02077617512651,
+        "exit_accrued_per_100": 0.0546448087431694,
+        "exit_clean_per_100": 104.04356839277347,
+        "exit_cost_per_100": 0.052049106600758316,
+        "exit_dirty_per_100": 104.09821320151663,
+        "initial_outlay_per_100": 104.07278656321408,
+        "net_holding_return_pct": 7.761311251420573,
+        "net_pnl_per_100": 8.077412893197653
+      },
+      "conventional_curve_duration_years": 9.770619147468484,
+      "conventional_face_per_100_green_for_equal_parallel_dv01": 93.03414877202489,
+      "dv01_matched_benchmark_pnl_per_100_green": 7.559446023469289,
+      "dv01_matched_excess_pnl_per_100_green": -0.22855513850968912,
+      "dv01_matched_excess_return_bps_of_initial_green_outlay": -23.394776465285233,
+      "green": {
+        "components": {
+          "carry_forward_curve_per_100": 5.494827752197349,
+          "rate_curve_change_per_100": 0.0,
+          "spread_change_after_rate_shift_per_100": 0.0,
+          "static_curve_roll_down_per_100": 2.1305501016106945,
+          "transaction_cost_per_100": -0.29448696884844694
+        },
+        "coupon_cash_per_100": 6.25,
+        "coupon_reinvestment_per_100": 0.14797481109020438,
+        "entry_accrued_per_100": 1.3527397260273972,
+        "entry_clean_per_100": 96.19588170209599,
+        "entry_cost_per_100": 0.14632293214218509,
+        "entry_dirty_per_100": 97.54862142812338,
+        "exit_accrued_per_100": 1.3490437158469946,
+        "exit_clean_per_100": 97.42698075499423,
+        "exit_cost_per_100": 0.14816403670626183,
+        "exit_dirty_per_100": 98.77602447084122,
+        "initial_outlay_per_100": 97.69494436026557,
+        "net_holding_return_pct": 7.503859010273633,
+        "net_pnl_per_100": 7.3308908849596
+      },
+      "green_curve_duration_years": 9.693116382583245,
+      "initial_greenium_bps_of_z_spread": 5,
+      "rate_shift_bps": 0,
+      "scenario": "unchanged_5bp",
+      "slope_shift_bps_at_10y": 0,
+      "status": "CONDITIONAL_ASSUMPTIONS_NO_OBSERVED_TRADE",
+      "terminal_greenium_bps_of_z_spread": 5
+    },
+    {
+      "benchmark_cash_balance_per_100_green": 0.871713277853047,
+      "benchmark_cash_interest_or_financing_cost_per_100_green": 0.04469369548106346,
+      "common_eib_spread_shift_bps": 0,
+      "conventional": {
+        "components": {
+          "carry_forward_curve_per_100": 5.9744147523070055,
+          "rate_curve_change_per_100": 0.0,
+          "spread_change_after_rate_shift_per_100": 0.0,
+          "static_curve_roll_down_per_100": 2.207057635578977,
+          "transaction_cost_per_100": -0.10405949468832157
+        },
+        "coupon_cash_per_100": 8.0,
+        "coupon_reinvestment_per_100": 0.10403536149586756,
+        "entry_accrued_per_100": 0.0547945205479452,
+        "entry_clean_per_100": 103.96598165457857,
+        "entry_cost_per_100": 0.05201038808756325,
+        "entry_dirty_per_100": 104.02077617512651,
+        "exit_accrued_per_100": 0.0546448087431694,
+        "exit_clean_per_100": 104.04356839277347,
+        "exit_cost_per_100": 0.052049106600758316,
+        "exit_dirty_per_100": 104.09821320151663,
+        "initial_outlay_per_100": 104.07278656321408,
+        "net_holding_return_pct": 7.761311251420573,
+        "net_pnl_per_100": 8.077412893197653
+      },
+      "conventional_curve_duration_years": 9.770619147468484,
+      "conventional_face_per_100_green_for_equal_parallel_dv01": 93.03414877202489,
+      "dv01_matched_benchmark_pnl_per_100_green": 7.559446023469289,
+      "dv01_matched_excess_pnl_per_100_green": -0.6359402836280239,
+      "dv01_matched_excess_return_bps_of_initial_green_outlay": -65.094492636476,
+      "green": {
+        "components": {
+          "carry_forward_curve_per_100": 5.494827752197349,
+          "rate_curve_change_per_100": 0.0,
+          "spread_change_after_rate_shift_per_100": -0.40799714082957905,
+          "static_curve_roll_down_per_100": 2.1305501016106945,
+          "transaction_cost_per_100": -0.29387497313720257
+        },
+        "coupon_cash_per_100": 6.25,
+        "coupon_reinvestment_per_100": 0.14797481109020438,
+        "entry_accrued_per_100": 1.3527397260273972,
+        "entry_clean_per_100": 96.19588170209599,
+        "entry_cost_per_100": 0.14632293214218509,
+        "entry_dirty_per_100": 97.54862142812338,
+        "exit_accrued_per_100": 1.3490437158469946,
+        "exit_clean_per_100": 97.01898361416465,
+        "exit_cost_per_100": 0.14755204099501745,
+        "exit_dirty_per_100": 98.36802733001164,
+        "initial_outlay_per_100": 97.69494436026557,
+        "net_holding_return_pct": 7.086861848561726,
+        "net_pnl_per_100": 6.923505739841265
+      },
+      "green_curve_duration_years": 9.693116382583245,
+      "initial_greenium_bps_of_z_spread": 5,
+      "rate_shift_bps": 0,
+      "scenario": "greenium_reverts_to_zero",
+      "slope_shift_bps_at_10y": 0,
+      "status": "CONDITIONAL_ASSUMPTIONS_NO_OBSERVED_TRADE",
+      "terminal_greenium_bps_of_z_spread": 0
+    },
+    {
+      "benchmark_cash_balance_per_100_green": 0.871713277853047,
+      "benchmark_cash_interest_or_financing_cost_per_100_green": 0.04469369548106346,
+      "common_eib_spread_shift_bps": 0,
+      "conventional": {
+        "components": {
+          "carry_forward_curve_per_100": 5.9744147523070055,
+          "rate_curve_change_per_100": 0.0,
+          "spread_change_after_rate_shift_per_100": 0.0,
+          "static_curve_roll_down_per_100": 2.207057635578977,
+          "transaction_cost_per_100": -0.10405949468832157
+        },
+        "coupon_cash_per_100": 8.0,
+        "coupon_reinvestment_per_100": 0.10403536149586756,
+        "entry_accrued_per_100": 0.0547945205479452,
+        "entry_clean_per_100": 103.96598165457857,
+        "entry_cost_per_100": 0.05201038808756325,
+        "entry_dirty_per_100": 104.02077617512651,
+        "exit_accrued_per_100": 0.0546448087431694,
+        "exit_clean_per_100": 104.04356839277347,
+        "exit_cost_per_100": 0.052049106600758316,
+        "exit_dirty_per_100": 104.09821320151663,
+        "initial_outlay_per_100": 104.07278656321408,
+        "net_holding_return_pct": 7.761311251420573,
+        "net_pnl_per_100": 8.077412893197653
+      },
+      "conventional_curve_duration_years": 9.770619147468484,
+      "conventional_face_per_100_green_for_equal_parallel_dv01": 93.03414877202489,
+      "dv01_matched_benchmark_pnl_per_100_green": 7.559446023469289,
+      "dv01_matched_excess_pnl_per_100_green": 0.1806864955619787,
+      "dv01_matched_excess_return_bps_of_initial_green_outlay": 18.49496887942007,
+      "green": {
+        "components": {
+          "carry_forward_curve_per_100": 5.494827752197349,
+          "rate_curve_change_per_100": 0.0,
+          "spread_change_after_rate_shift_per_100": 0.409856418699718,
+          "static_curve_roll_down_per_100": 2.1305501016106945,
+          "transaction_cost_per_100": -0.2951017534764965
+        },
+        "coupon_cash_per_100": 6.25,
+        "coupon_reinvestment_per_100": 0.14797481109020438,
+        "entry_accrued_per_100": 1.3527397260273972,
+        "entry_clean_per_100": 96.19588170209599,
+        "entry_cost_per_100": 0.14632293214218509,
+        "entry_dirty_per_100": 97.54862142812338,
+        "exit_accrued_per_100": 1.3490437158469946,
+        "exit_clean_per_100": 97.83683717369395,
+        "exit_cost_per_100": 0.14877882133431142,
+        "exit_dirty_per_100": 99.18588088954094,
+        "initial_outlay_per_100": 97.69494436026557,
+        "net_holding_return_pct": 7.9227564637206855,
+        "net_pnl_per_100": 7.740132519031268
+      },
+      "green_curve_duration_years": 9.693116382583245,
+      "initial_greenium_bps_of_z_spread": 5,
+      "rate_shift_bps": 0,
+      "scenario": "greenium_widens_to_10bp",
+      "slope_shift_bps_at_10y": 0,
+      "status": "CONDITIONAL_ASSUMPTIONS_NO_OBSERVED_TRADE",
+      "terminal_greenium_bps_of_z_spread": 10
+    },
+    {
+      "benchmark_cash_balance_per_100_green": 0.871713277853047,
+      "benchmark_cash_interest_or_financing_cost_per_100_green": 0.04469369548106346,
+      "common_eib_spread_shift_bps": 0,
+      "conventional": {
+        "components": {
+          "carry_forward_curve_per_100": 5.9744147523070055,
+          "rate_curve_change_per_100": -8.392646042060719,
+          "spread_change_after_rate_shift_per_100": 0.0,
+          "static_curve_roll_down_per_100": 2.207057635578977,
+          "transaction_cost_per_100": -0.0998631716672912
+        },
+        "coupon_cash_per_100": 8.0,
+        "coupon_reinvestment_per_100": 0.10403536149586756,
+        "entry_accrued_per_100": 0.0547945205479452,
+        "entry_clean_per_100": 103.96598165457857,
+        "entry_cost_per_100": 0.05201038808756325,
+        "entry_dirty_per_100": 104.02077617512651,
+        "exit_accrued_per_100": 0.0546448087431694,
+        "exit_clean_per_100": 95.65092235071275,
+        "exit_cost_per_100": 0.04785278357972795,
+        "exit_dirty_per_100": 95.70556715945591,
+        "initial_outlay_per_100": 104.07278656321408,
+        "net_holding_return_pct": -0.2988647043221964,
+        "net_pnl_per_100": -0.3110368258420203
+      },
+      "conventional_curve_duration_years": 9.770619147468484,
+      "conventional_face_per_100_green_for_equal_parallel_dv01": 93.03414877202489,
+      "dv01_matched_benchmark_pnl_per_100_green": -0.24467676780858572,
+      "dv01_matched_excess_pnl_per_100_green": -0.23065669243091902,
+      "dv01_matched_excess_return_bps_of_initial_green_outlay": -23.609890352190178,
+      "green": {
+        "components": {
+          "carry_forward_curve_per_100": 5.494827752197349,
+          "rate_curve_change_per_100": -7.8179512721072655,
+          "spread_change_after_rate_shift_per_100": 0.0,
+          "static_curve_roll_down_per_100": 2.1305501016106945,
+          "transaction_cost_per_100": -0.28276004194028603
+        },
+        "coupon_cash_per_100": 6.25,
+        "coupon_reinvestment_per_100": 0.14797481109020438,
+        "entry_accrued_per_100": 1.3527397260273972,
+        "entry_clean_per_100": 96.19588170209599,
+        "entry_cost_per_100": 0.14632293214218509,
+        "entry_dirty_per_100": 97.54862142812338,
+        "exit_accrued_per_100": 1.3490437158469946,
+        "exit_clean_per_100": 89.60902948288697,
+        "exit_cost_per_100": 0.13643710979810095,
+        "exit_dirty_per_100": 90.95807319873396,
+        "initial_outlay_per_100": 97.69494436026557,
+        "net_holding_return_pct": -0.4865486779813676,
+        "net_pnl_per_100": -0.47533346023950473
+      },
+      "green_curve_duration_years": 9.693116382583245,
+      "initial_greenium_bps_of_z_spread": 5,
+      "rate_shift_bps": 100,
+      "scenario": "rates_up_100bp",
+      "slope_shift_bps_at_10y": 0,
+      "status": "CONDITIONAL_ASSUMPTIONS_NO_OBSERVED_TRADE",
+      "terminal_greenium_bps_of_z_spread": 5
+    },
+    {
+      "benchmark_cash_balance_per_100_green": 0.871713277853047,
+      "benchmark_cash_interest_or_financing_cost_per_100_green": 0.04469369548106346,
+      "common_eib_spread_shift_bps": 25,
+      "conventional": {
+        "components": {
+          "carry_forward_curve_per_100": 5.9744147523070055,
+          "rate_curve_change_per_100": 0.0,
+          "spread_change_after_rate_shift_per_100": -2.172221538732387,
+          "static_curve_roll_down_per_100": 2.207057635578977,
+          "transaction_cost_per_100": -0.10297338391895537
+        },
+        "coupon_cash_per_100": 8.0,
+        "coupon_reinvestment_per_100": 0.10403536149586756,
+        "entry_accrued_per_100": 0.0547945205479452,
+        "entry_clean_per_100": 103.96598165457857,
+        "entry_cost_per_100": 0.05201038808756325,
+        "entry_dirty_per_100": 104.02077617512651,
+        "exit_accrued_per_100": 0.0546448087431694,
+        "exit_clean_per_100": 101.87134685404108,
+        "exit_cost_per_100": 0.05096299583139212,
+        "exit_dirty_per_100": 101.92599166278424,
+        "initial_outlay_per_100": 104.07278656321408,
+        "net_holding_return_pct": 5.6751410818112,
+        "net_pnl_per_100": 5.9062774652346475
+      },
+      "conventional_curve_duration_years": 9.770619147468484,
+      "conventional_face_per_100_green_for_equal_parallel_dv01": 93.03414877202489,
+      "dv01_matched_benchmark_pnl_per_100_green": 5.539548659376046,
+      "dv01_matched_excess_pnl_per_100_green": -0.22719084052037353,
+      "dv01_matched_excess_return_bps_of_initial_green_outlay": -23.255127684250613,
+      "green": {
+        "components": {
+          "carry_forward_curve_per_100": 5.494827752197349,
+          "rate_curve_change_per_100": 0.0,
+          "spread_change_after_rate_shift_per_100": -2.0215654142252646,
+          "static_curve_roll_down_per_100": 2.1305501016106945,
+          "transaction_cost_per_100": -0.29145462072710904
+        },
+        "coupon_cash_per_100": 6.25,
+        "coupon_reinvestment_per_100": 0.14797481109020438,
+        "entry_accrued_per_100": 1.3527397260273972,
+        "entry_clean_per_100": 96.19588170209599,
+        "entry_cost_per_100": 0.14632293214218509,
+        "entry_dirty_per_100": 97.54862142812338,
+        "exit_accrued_per_100": 1.3490437158469946,
+        "exit_clean_per_100": 95.40541534076897,
+        "exit_cost_per_100": 0.14513168858492392,
+        "exit_dirty_per_100": 96.75445905661596,
+        "initial_outlay_per_100": 97.69494436026557,
+        "net_holding_return_pct": 5.437699825351773,
+        "net_pnl_per_100": 5.312357818855673
+      },
+      "green_curve_duration_years": 9.693116382583245,
+      "initial_greenium_bps_of_z_spread": 5,
+      "rate_shift_bps": 0,
+      "scenario": "eib_spreads_up_25bp",
+      "slope_shift_bps_at_10y": 0,
+      "status": "CONDITIONAL_ASSUMPTIONS_NO_OBSERVED_TRADE",
+      "terminal_greenium_bps_of_z_spread": 5
+    },
+    {
+      "benchmark_cash_balance_per_100_green": 0.871713277853047,
+      "benchmark_cash_interest_or_financing_cost_per_100_green": 0.04469369548106346,
+      "common_eib_spread_shift_bps": 0,
+      "conventional": {
+        "components": {
+          "carry_forward_curve_per_100": 5.9744147523070055,
+          "rate_curve_change_per_100": -2.031491711526712,
+          "spread_change_after_rate_shift_per_100": 0.0,
+          "static_curve_roll_down_per_100": 2.207057635578977,
+          "transaction_cost_per_100": -0.10304374883255821
+        },
+        "coupon_cash_per_100": 8.0,
+        "coupon_reinvestment_per_100": 0.10403536149586756,
+        "entry_accrued_per_100": 0.0547945205479452,
+        "entry_clean_per_100": 103.96598165457857,
+        "entry_cost_per_100": 0.05201038808756325,
+        "entry_dirty_per_100": 104.02077617512651,
+        "exit_accrued_per_100": 0.0546448087431694,
+        "exit_clean_per_100": 102.01207668124675,
+        "exit_cost_per_100": 0.051033360744994954,
+        "exit_dirty_per_100": 102.06672148998992,
+        "initial_outlay_per_100": 104.07278656321408,
+        "net_holding_return_pct": 5.810295973821917,
+        "net_pnl_per_100": 6.046936927526705
+      },
+      "conventional_curve_duration_years": 9.770619147468484,
+      "conventional_face_per_100_green_for_equal_parallel_dv01": 93.03414877202489,
+      "dv01_matched_benchmark_pnl_per_100_green": 5.6704099927867695,
+      "dv01_matched_excess_pnl_per_100_green": -0.17573590027506736,
+      "dv01_matched_excess_return_bps_of_initial_green_outlay": -17.988228707824778,
+      "green": {
+        "components": {
+          "carry_forward_curve_per_100": 5.494827752197349,
+          "rate_curve_change_per_100": -1.8389752553308938,
+          "spread_change_after_rate_shift_per_100": 0.0,
+          "static_curve_roll_down_per_100": 2.1305501016106945,
+          "transaction_cost_per_100": -0.2917285059654506
+        },
+        "coupon_cash_per_100": 6.25,
+        "coupon_reinvestment_per_100": 0.14797481109020438,
+        "entry_accrued_per_100": 1.3527397260273972,
+        "entry_clean_per_100": 96.19588170209599,
+        "entry_cost_per_100": 0.14632293214218509,
+        "entry_dirty_per_100": 97.54862142812338,
+        "exit_accrued_per_100": 1.3490437158469946,
+        "exit_clean_per_100": 95.58800549966334,
+        "exit_cost_per_100": 0.1454055738232655,
+        "exit_dirty_per_100": 96.93704921551033,
+        "initial_outlay_per_100": 97.69494436026557,
+        "net_holding_return_pct": 5.624317745910394,
+        "net_pnl_per_100": 5.494674092511702
+      },
+      "green_curve_duration_years": 9.693116382583245,
+      "initial_greenium_bps_of_z_spread": 5,
+      "rate_shift_bps": 0,
+      "scenario": "curve_steepens_25bp_at_10y",
+      "slope_shift_bps_at_10y": 25,
+      "status": "CONDITIONAL_ASSUMPTIONS_NO_OBSERVED_TRADE",
+      "terminal_greenium_bps_of_z_spread": 5
+    }
+  ],
+  "settlement_date_assumption": "2025-10-20",
+  "status": "CONDITIONAL_MODEL_COMPLETE_HISTORICAL_ENTRY_NEEDS_DATA"
+}

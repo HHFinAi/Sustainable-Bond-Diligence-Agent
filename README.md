@@ -12,7 +12,9 @@ A credible label does not establish a good bond investment. What does the invest
 
 **Status:** historical real-bond research sample with an evidence cutoff of **16 October 2025**. It is not a live recommendation or an approved workflow packet. Exact issue documents and matched historical quotes remain material gaps.
 
-The conditional model illustrates a **9.37% price decline for a +100 bp yield shock** at its original-settlement anchor. That anchor is provisional: the result is a scoped sensitivity, not a current price forecast.
+The extension adds dated clean/dirty cash flows, carry, roll-down, curve/DV01 matching, funding and trading costs. At an assumed 5 bp entry premium, the unchanged-premium case loses **23.39 bp** relative to its matched comparator; the terminal premium must reach **7.795 bp** to break even under the stated assumptions. These are conditional calculations, not observed market returns.
+
+The original **9.37% price decline for a +100 bp yield shock** remains a scoped sensitivity at a provisional original-settlement anchor. Primary historical zero-volume exchange markings are registered and excluded from executable entry prices.
 
 [Read the investment memo](examples/research/eib-eugb-2037/MEMO.md) · [Inspect sources, assumptions and reproduction instructions](examples/research/eib-eugb-2037/README.md)
 
