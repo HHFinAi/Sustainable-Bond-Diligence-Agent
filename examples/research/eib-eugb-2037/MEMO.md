@@ -1,12 +1,12 @@
 # EIB 3.125% EuGB due 15 May 2037: credible label, unproven entry price
 
-**WATCH | ISIN EU000A3K4EG9 | Information cut: 16 October 2025 | Prepared retrospectively: 3 October 2026**
+**WATCH | ISIN EU000A3K4EG9 | Information cut: 16 October 2025 | Prepared retrospectively: 3 October 2026 | Calculation and retrieval follow-up: 8 October 2026**
 
 ## Investment judgment
 
 Retain this issue on a sustainable fixed-income research watchlist. The issuer has substantial reported financial buffers, and the bond-specific external review supports accepting the reported allocation process. Neither finding establishes that investors should pay a yield premium. Without issue-specific legal terms and matched historical prices, an entry recommendation would be stronger than the evidence.
 
-For the illustrative mandate below, the proposed entry rule is **no yield concession to a suitably matched EIB conventional bond after incremental costs**, unless an investment committee explicitly values and budgets for the green allocation mandate. That is an analyst policy, not an observed market level. The model shows why: a hypothetical 5 bp yield concession costs approximately 0.497 price points upfront; with the assumed holding-period costs, outperformance needs further relative spread tightening. Strong demand at issuance alone does not supply that thesis.
+For the illustrative mandate below, the proposed entry rule is **no yield concession to a suitably matched EIB conventional bond after incremental costs**, unless an investment committee explicitly values and budgets for the green allocation mandate. That is an analyst policy, not an observed market level. The completed conditional holding-period model shows why: buying at an assumed 5 bp curve-adjusted yield concession underperforms a duration-matched conventional allocation by 23.39 bp of initial outlay if that concession persists. Under the stated curve, funding and costs, break-even needs the concession to reach 7.795 bp at exit. These are scenario calculations, not observed EIB prices or a predicted return. Strong demand at issuance alone does not supply that thesis.
 
 | Research question | Judgment | Basis and consequence |
 |---|---|---|
@@ -25,7 +25,7 @@ For the illustrative mandate below, the proposed entry rule is **no yield conces
 
 The information cut is chosen to include the **16 October 2025** post-issuance review, rather than pretending later evidence was available at issuance. The 2024 financial report was published on **7 May 2025**. The bond was priced on **2 April 2025**. The model separately anchors at original settlement, **9 April 2025**; its yield is not an October market yield. [S02, p. 1; S03, pp. 102–103; S05]
 
-Sources were retrieved on 3 October 2026. This is a reconstruction from documents bearing earlier dates, not a contemporaneously recorded 2025 recommendation or a claim of historical investment performance. Current exchange screens appear only in the separately labelled follow-up screen below; their prices are excluded.
+The original sources were retrieved on 3 October 2026; new historical exchange observations and access checks were reviewed on 8 October 2026. This is a reconstruction from documents bearing earlier dates, not a contemporaneously recorded 2025 recommendation or a claim of historical investment performance. Current exchange screens appear only in the separately labelled follow-up screen below; their prices are excluded.
 
 ## Instrument and documentation
 
@@ -78,9 +78,18 @@ The financially material channel is therefore not an assumed coupon uplift from 
 
 ## Market evidence and comparator discipline
 
-The issuer's July 2025 newsletter reports strong demand and describes issuance at fair value without a new-issue concession. **Treat that as the issuer's market assessment, not independent proof of a greenium or secondary-market liquidity.** [S02, p. 1] No dealer two-way quotes, matched settlement-date conventional prices or independent fair-value curve were verified for the historical cut.
+The issuer's July 2025 newsletter reports strong demand and describes issuance at fair value without a new-issue concession. **Treat that as the issuer's market assessment, not independent proof of a greenium or secondary-market liquidity.** [S02, p. 1] No dealer two-way quotes, matched executable settlement-date conventional prices or independent fair-value curve were verified for the historical cut. The follow-up did retrieve primary historical daily price notations; their scope is described below.
 
 The appropriate first comparator is a conventional **same-issuer EUR bullet**, close in maturity and seniority, with cash-flow, duration and liquidity differences adjusted. A German government bond alone cannot isolate the label effect: it adds issuer, liquidity, financing and curve differences.
+
+**Historical primary observations retrieved on 8 October 2026:**
+
+| Dated Quotrix daily sheet | Green EU000A3K4EG9 | Candidate XS0219724878 | Decision |
+|---|---|---|---|
+| 4 September 2025 | 99.885, 07:27:07; volume 0; side code M | 108.386, 07:27:06; volume 0; side code M | Historical reference observations only. [S13, printed pp. 414 and 411] |
+| 12 August 2025 | 100.590, 07:27:06; volume 0; side code M | 109.086, 07:27:05; volume 0; side code M | Historical reference observations only. [S14, printed pp. 418 and 416] |
+
+The printed times have no verified timezone. This review does not interpret M as a midpoint, establish clean/dirty convention, or treat zero-volume entries as executable quotes. The sheets do not provide matched two-way sizes for 16 October. Price levels are not comparable without accrued-interest and cash-flow adjustments. Consequently these observations are recorded in [historical-observations.json](historical-observations.json) and **excluded from model entry prices**. The exact-cut 16 October daily-sheet URL was inaccessible. This narrows the evidence gap from “no dated observations” to “no usable historical entry-price packet.”
 
 **Retrospective follow-up screen, performed 3 October 2026 — excluded from the historical valuation inputs:**
 
@@ -115,28 +124,61 @@ The rate/spread split is a scenario label: both enter as an additive yield chang
 
 **Contract sensitivity:** moving the assumed first payment to 15 May 2026, with a long first coupon, changes the calibrated yield by approximately **−0.095 bp**. That small numerical difference supports the scale of the risk illustration; it does not resolve which schedule is legally correct. [A02; `results.json`]
 
-## Relative-value break-even and expression
+## Dated relative-value, carry and entry hurdle
 
-Define hypothetical greenium as **conventional yield minus green yield**; a positive number is a yield concession paid for the green bond. The following identical-cash-flow comparison isolates mechanics. It is **not an observed EIB greenium**.
+The follow-up replaces the simple constant-duration approximation with a full dated, two-bond calculation in [holding_period.py](holding_period.py). [Holding-period inputs](holding-period-inputs.json) separate assumptions from evidence; [results](holding-period-results.json), [cash flows](dated-cashflows.csv), [scenarios](holding-period-scenarios.csv) and [entry hurdles](entry-hurdles.csv) reproduce locally. The older `relative-value.csv` is retained as an explicitly simplified issue-date illustration; the dated model is the relevant conditional comparison.
 
-| Hypothetical greenium | Green price premium per 100 | Further relative tightening needed to cover assumed two-year carry drag and costs |
+**All market levels in this section are assumptions.** Entry settles on 20 October 2025 and exit on 20 October 2027. The two supplied schedules assume annual 15 May / 15 October payments, an option-free bullet and redemption at 100. Coupon accrual uses Actual/Actual annual reference periods; curve discounting uses a separate ACT/365F clock with continuously compounded zero rates. A sloped zero curve, 50 bp conventional z-spread, 2.5% continuous funding/reinvestment rate and execution costs are explicit inputs. No contract convention or historical curve has been established by this calculation. The comparator's interest commencement and first-coupon dates are artificial model anchors for future payments, not its original issue dates.
+
+Define **curve-adjusted greenium** as conventional minus green continuous z-spread on the same zero curve. A positive number means a yield concession for the green issue. Different coupons and maturity dates enter through their actual modelled cash flows rather than an equal-face comparison. The model matches **initial parallel curve DV01**, uses a signed cash/funding balance to equalise starting outlays, and publishes residual key-rate risk. It does not claim complete duration hedging under a nonparallel curve move.
+
+At the assumed 5 bp starting greenium, the green issue's entry price is **96.1959 clean + 1.3527 accrued = 97.5486 dirty per 100**. Its initial curve duration is **9.6931 years**, versus **9.7706 years** for the comparator. Matching initial parallel DV01 requires **93.0341 conventional face per 100 green face**; the residual starting cash balance is **0.8717 per 100 green face**, remunerated at the assumed funding rate. The rates, prices and durations here are model outputs from the illustrative curve, not quoted October 2025 marks.
+
+**Dated green-bond P&L, unchanged 5 bp greenium and static residual-tenor curve:**
+
+| Component | Per 100 green face |
+|---|---:|
+| Coupon cash received during the horizon | 6.2500 |
+| Reinvestment interest on those coupons | 0.1480 |
+| Carry under the time-zero implied forward curve, including coupons | 5.4948 |
+| Static-curve roll-down versus that forward-curve endpoint | 2.1306 |
+| Rate / spread move | 0.0000 |
+| Entry and exit transaction costs | −0.2945 |
+| **Net P&L** | **7.3309** |
+
+The first two rows describe cash receipt and are already included in carry; they must not be added again. Entry costs are charged on entry dirty value and exit costs on exit dirty value: green 15 bp on each leg, conventional 5 bp on each leg. These are assumptions, not measured bid/offer spreads. The decomposition reconciles to exit dirty value plus coupon cash and reinvestment, less entry dirty value and both costs. Carry uses the time-zero implied forward zero curve; roll-down measures the difference when the residual-tenor curve is held static. Those two scenarios must not be mistaken for two independently expected sources of excess return.
+
+| Two-year conditional scenario | Green net return | Conventional net return | Excess over DV01-matched conventional/cash benchmark |
+|---|---:|---:|---:|
+| Greenium persists at 5 bp | 7.504% | 7.761% | **−23.39 bp** |
+| Greenium reverts from 5 bp to zero | 7.087% | 7.761% | **−65.09 bp** |
+| Greenium widens from 5 bp to 10 bp | 7.923% | 7.761% | **+18.49 bp** |
+| Rates rise 100 bp; greenium unchanged | −0.487% | −0.299% | **−23.61 bp** |
+| Common EIB spreads widen 25 bp; rates unchanged | 5.438% | 5.675% | **−23.26 bp** |
+| Curve steepens 25 bp at ten years; greenium unchanged | 5.624% | 5.810% | **−17.99 bp** |
+
+Excess is calculated from a matched-DV01 comparator plus its cash/funding balance, on the same initial green outlay. It is therefore not the simple difference between the two displayed unlevered percentage returns. Rate and spread shocks enter separately: a flat 25 bp shift in either can yield the same final price, but attribution and interpretation differ. Rate/slope changes are applied first and spread changes second; nonlinear attribution depends on this stated ordering. Remaining key-rate risk explains why a steepening can alter relative P&L despite initial parallel DV01 matching.
+
+| Assumed initial greenium | Required terminal greenium to break even | Additional relative tightening |
 |---:|---:|---:|
-| 0 bp | 0.000 | 2.01 bp |
-| 5 bp | 0.497 | 3.02 bp |
-| 10 bp | 0.996 | 4.03 bp |
+| 0 bp | 1.545 bp | 1.545 bp |
+| 5 bp | 7.795 bp | 2.795 bp |
+| 10 bp | 14.044 bp | 4.044 bp |
 
-The approximation is `required additional tightening (yield bp) = (greenium bp × 2 years + 20 bp of value) / 9.9377`. The **20 bp** is an assumed incremental round-trip cost charged to the green position relative to the comparator, not an observed bid/offer. It excludes roll-down and assumes equal rate exposure and constant duration. At a starting 5 bp greenium, the model requires it to grow to roughly 8 bp for the incremental spread gain to offset the assumed drag. Reversion toward zero works against the position. A full holding-period model with actual cash flows, curves and execution costs must replace this approximation before entry. [A04–A05; `relative-value.csv`]
+The solver sets the **full cost-inclusive, DV01-matched excess P&L to zero**. It does not attach probabilities to widening or turn the hurdle into a forecast. Different actual curves, costs, funding rates, contracts or terminal assumptions change the hurdle.
 
-**Expression decision:** maintain the watchlist with no hypothetical holding or position size. If documentation and quotes clear, assess a cash-bond allocation within the portfolio's issuer and duration budgets. If the budget is stated as maximum EUR DV01, allowable face at this historical anchor is approximately `DV01 budget / 990.07 × EUR 1 million`; actual-date risk must be recomputed. No derivative hedge or financing advantage is assumed.
+**Quote-ready entry work:** [quote-request.json](quote-request.json) lists the exact missing two-way prices, size, timestamp/timezone, settlement, convention and source fields. `analyze_quotes.py --quotes <private-reviewed-packet.json>` prints clean/dirty and curve-adjusted bid/ask/mid z-spreads only after checking the exact 16 October 2025 date in Europe/Paris, settlement alignment and complete attested fields. The quote-pair tolerance cannot exceed 60 seconds, and separately supplied issue terms must also be marked reviewed; a packet attestation cannot certify the default assumed contracts. The checked-in template returns **NEEDS_DATA**, with pricing and entry recommendation null. A filled packet is still a caller attestation requiring accountable source/contract review; the tool does not authenticate a dealer quote, approve a trade, or supply unknown future exit prices. Keep licensed packets private.
+
+**Expression decision:** WATCH, with no position size or assumed actual holding. Exact legal documents and matched historical executable quotes remain prerequisites for an entry decision. The proposed policy remains no yield concession after incremental costs, unless a committee explicitly approves a mandate premium. The conditional model demonstrates the economics of that policy and the evidence needed to revisit it.
 
 ## Outstanding decisions and evidence that would change them
 
 | Priority | Open item | Required evidence/action | Effect on decision |
 |---|---|---|---|
-| Material | Exact legal obligation | Obtain final issue document and incorporated conditions; verify ranking/recourse, redemption/options, payment calendar, default and environmental remedies. | Necessary before legal underwriting or operational use of the model. |
-| Material | Historical entry economics | Matched, timestamped two-way quotes for the issue and documented conventional comparators; settlement, accrued interest, sizes and liquidity costs. | Enter research consideration only if adjusted economics clear the no-concession policy or an explicitly approved mandate premium. |
+| Material — still open after 8 October retrieval | Exact legal obligation | Obtain final issue document and incorporated conditions; verify ranking/recourse, redemption/options, payment calendar, default and environmental remedies. | Necessary before legal underwriting or operational use of the model. |
+| Material — dated references found, executable packet still open | Historical entry economics | Matched, timestamped two-way quotes for the issue and documented conventional comparators; settlement, accrued interest, sizes and liquidity costs. | Enter research consideration only if adjusted economics clear the no-concession policy or an explicitly approved mandate premium. |
 | Material | Issuer credit depth | Reconcile concentrations, guarantees, loan quality, capital sensitivity and stressed liquidity using the same accounting perimeter. | Deteriorating loss absorption or funding resilience would remove the candidate from the watchlist. |
-| Material for impact claims | Attribution and allocation reconciliation | Retrieve project allocation/impact spreadsheets and original pre-issuance factsheet; reconcile net proceeds and reporting periods. | Numeric impact remains unclaimed until independently traceable. |
+| Material for impact claims | Attribution and allocation reconciliation | Retrieve project allocation/impact spreadsheets and original pre-issuance factsheet; reconcile actual issue fees/net proceeds and reporting periods. The 0.155% programme-average fee in S03 p. 85 is not this issue's actual fee. | Numeric impact remains unclaimed until independently traceable. |
 | Governance | Actual mandate and accountable review | Portfolio limits, objective for any label premium, independent model review, and named human decision. | Required for any institutional approval; no approval is recorded here. |
 
 Stewardship questions are concrete: which assets were refinanced; what share of net proceeds remains unallocated at year-end; how are substitutions and methodology changes disclosed; what measured outcomes differ from ex-ante estimates; and how are adverse safeguard findings escalated? These are proposed questions, **not outreach that has occurred**. Review at the first complete issue-year allocation report and whenever material issuer or label evidence changes. Do not infer a debt default from an allocation failure without the contract.
@@ -154,7 +196,7 @@ Stewardship questions are concrete: which assets were refinanced; what share of 
 
 ## Sources and reproduction
 
-Page numbers above are **printed pages**. The 2024 financial report PDF's page counter is printed page + 4; the CAB framework's counter equals its printed page. Facts and retrieval limits are recorded in [`sources.json`](sources.json) and [`sources.csv`](sources.csv); assumptions in [`assumptions.json`](assumptions.json) and [`assumptions.csv`](assumptions.csv). No quoted secondary-market price enters the model.
+Page numbers above are **printed pages**. The 2024 financial report PDF's page counter is printed page + 4; the CAB framework's counter equals its printed page. Facts and retrieval limits are recorded in [`sources.json`](sources.json) and [`sources.csv`](sources.csv); assumptions in [`assumptions.json`](assumptions.json) and [`assumptions.csv`](assumptions.csv). No secondary-market price notation enters the model. Dated reference notations are recorded separately and excluded; conditional prices come from labelled curves and spreads.
 
 - **S01:** [EIB transaction announcement, 2 April 2025](https://www.eib.org/en/investor-relations/press/all/fi-2025-09-eib-eugbs-eur-2037), indexed summary terms; full-page retrieval unsuccessful.
 - **S02:** [EIB Funding Newsletter, 31 July 2025](https://www.eib.org/files/fi/25-07-eib-overall-funding-newsletter.pdf), p. 1.
@@ -167,6 +209,8 @@ Page numbers above are **printed pages**. The 2024 financial report PDF's page c
 - **S09:** [EIB EuGB allocation spreadsheet landing page](https://www.eib.org/en/investor-relations/publications/all/eib-eugbs-cab-allocation-report-2024), access redirected to disclaimer; underlying spreadsheet not reviewed.
 - **S10:** [EIB 2024 CAB impact spreadsheet landing page](https://www.eib.org/en/investor-relations/publications/all/eib-cab-impact-report-2024), access redirected to disclaimer; underlying spreadsheet not reviewed.
 - **S11:** [Borsa Italiana XS0219724878](https://www.borsaitaliana.it/borsa/obbligazioni/mot/euro-obbligazioni/scheda/XS0219724878-MOTX.html?lang=en), Instrument Info, retrospective candidate screen only.
+- **S13:** [Quotrix daily sheet, 4 September 2025](https://www.quotrix.de/dokument-download/quotrix/kursblatt/Kursblatt-Quotrix-2025.09.04.pdf), printed pp. 411 and 414; dated non-executable reference observations only.
+- **S14:** [Quotrix daily sheet, 12 August 2025](https://www.quotrix.de/dokument-download/quotrix/kursblatt/Kursblatt-Quotrix-2025.08.12.pdf), printed pp. 416 and 418; dated non-executable reference observations only.
 - **S12:** [Borsa Italiana XS0740808802](https://www.borsaitaliana.it/borsa/obbligazioni/mot/euro-obbligazioni/scheda/XS0740808802-MOTX.html?lang=en), Instrument Info, rejected GBP comparator.
 
-Run `python3 calculate.py --check` from this folder to verify the stored output files. Arithmetic validation is described in [`VALIDATION.md`](VALIDATION.md). This memo adds substantive historical analysis alongside the original `NEEDS_DATA` control; it does not alter that control or represent a runtime-approved research packet.
+Run `python3 calculate.py --check` from this folder to verify the stored output files. Arithmetic validation is described in [`VALIDATION.md`](VALIDATION.md); the open contractual, historical-price and allocation gaps are recorded in [`evidence-gaps.json`](evidence-gaps.json). This memo adds substantive historical analysis alongside the original `NEEDS_DATA` control; it does not alter that control or represent a runtime-approved research packet.

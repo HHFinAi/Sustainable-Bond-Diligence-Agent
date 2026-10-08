@@ -1,0 +1,62 @@
+{
+  "reviewed_on": "2026-10-08",
+  "historical_information_cut": "2025-10-16",
+  "research_status": "WATCH",
+  "transaction_status": "NEEDS_DATA",
+  "items": [
+    {
+      "id": "LEGAL01",
+      "severity": "MATERIAL",
+      "status": "OPEN",
+      "question": "Exact EARN issue-specific contractual terms",
+      "reviewed": "Issuer transaction page redirected to the disclaimer; generic EMTN documentation rejected as proof of incorporation; original issue factsheet identified only in S03.",
+      "required": "Issue-specific signed offering circular/final terms and incorporated conditions: annual dates, first coupon, day count, business-day adjustment, settlement/ex-coupon rules, redemption, options, ranking/recourse, governing law/default/label remedies",
+      "effect": "Model schedule and legal underwriting remain conditional"
+    },
+    {
+      "id": "MARKET01",
+      "severity": "MATERIAL",
+      "status": "PARTIALLY_NARROWED_STILL_OPEN",
+      "question": "Historical executable matched entry economics at 16 October 2025",
+      "reviewed": "Primary dated Quotrix M notations on 4 September and 12 August 2025 for both ISINs; zero volume and no verified executable two-way convention. Exact 16 October 2025 PDF inaccessible.",
+      "required": "Matched timezone-aware two-way EUR clean quotes and size for both exact ISINs, same settlement, source and locator, reviewed legal equivalence, zero/issuer curve and incremental costs.",
+      "effect": "No observed greenium, entry recommendation or performance; conditional model and quote request are complete"
+    },
+    {
+      "id": "ALLOCATION01",
+      "severity": "MATERIAL_FOR_ALLOCATION_RECONCILIATION",
+      "status": "OPEN",
+      "question": "Actual issue net proceeds and full issue-year allocation",
+      "reviewed": "S03 reports EUR 2,804.30 million of 2024 eligible allocations and EUR 3 billion nominal issue size. The programme-average 0.155% fee is not the actual issue fee. Spreadsheet landing page still redirected to the disclaimer on 8 October 2026.",
+      "required": "Actual fees and net proceeds, allocation ledger, first full issue-year reviewed report, and original 28 March 2025 factsheet.",
+      "effect": "No final allocation percentage asserted"
+    },
+    {
+      "id": "IMPACT01",
+      "severity": "MATERIAL_FOR_NUMERIC_IMPACT",
+      "status": "OPEN",
+      "question": "Traceable bond-level impact and additionality",
+      "reviewed": "S03 impact link; underlying project spreadsheet inaccessible during review",
+      "required": "Project financed share, baseline/counterfactual, methodology, lifespan, attribution and doublecount control",
+      "effect": "No avoided emissions per bond or causal additionality claim."
+    },
+    {
+      "id": "CREDIT01",
+      "severity": "MATERIAL_FOR_UNDERWRITING",
+      "status": "OPEN",
+      "question": "Issuer concentrations/capital/liquidity under correlated stress",
+      "reviewed": "Original standalone balance sheet/risk snapshot and static loss stress retained.",
+      "required": "Concentration/guarantee reconciliation, stressed funding/liquidity and accounting-consistent capital sensitivity",
+      "effect": "Watchlist credit assessment is not a completed internal credit rating."
+    },
+    {
+      "id": "GOV01",
+      "severity": "GOVERNANCE",
+      "status": "OPEN",
+      "question": "Actual portfolio mandate and accountable review",
+      "reviewed": "No human approval or client mandate represented",
+      "required": "Actual issuer/DV01 limits, approved label-premium budget if any, independent model/source review and decision record.",
+      "effect": "No institutional approval or execution authority"
+    }
+  ]
+}

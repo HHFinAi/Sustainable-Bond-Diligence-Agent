@@ -13,10 +13,14 @@ import csv
 import hashlib
 import json
 import math
+import importlib.util
 from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
+_holding_spec = importlib.util.spec_from_file_location("eib_holding_period", ROOT / "holding_period.py")
+holding_period = importlib.util.module_from_spec(_holding_spec)
+_holding_spec.loader.exec_module(holding_period)
 
 
 def schedule(data: dict, long_first: bool = False) -> list[dict]:
@@ -189,9 +193,38 @@ def build(data: dict) -> dict[str, str]:
             "scope": "Arithmetic and internal consistency only; no external model validation or human approval"},
         "inputs_sha256": hashlib.sha256((ROOT / "inputs.json").read_bytes()).hexdigest(),
     }
+    hp_inputs = json.loads((ROOT / "holding-period-inputs.json").read_text())
+    quotes = json.loads((ROOT / "quote-request.json").read_text())
+    holding = holding_period.build(hp_inputs, quotes, data["research_as_of"])
+    holding["inputs_sha256"] = hashlib.sha256((ROOT / "holding-period-inputs.json").read_bytes()).hexdigest()
+    holding["quote_request_sha256"] = hashlib.sha256((ROOT / "quote-request.json").read_bytes()).hexdigest()
+    hp_rows = []
+    for row in holding["scenarios"]:
+        hp_rows.append({"scenario": row["scenario"],
+                       "initial_greenium_bps": row["initial_greenium_bps_of_z_spread"],
+                       "terminal_greenium_bps": row["terminal_greenium_bps_of_z_spread"],
+                       "rate_shift_bps": row["rate_shift_bps"],
+                       "slope_shift_bps_at_10y": row["slope_shift_bps_at_10y"],
+                       "common_eib_spread_shift_bps": row["common_eib_spread_shift_bps"],
+                       "green_net_return_pct": row["green"]["net_holding_return_pct"],
+                       "conventional_net_return_pct": row["conventional"]["net_holding_return_pct"],
+                       "dv01_matched_excess_return_bps": row["dv01_matched_excess_return_bps_of_initial_green_outlay"],
+                       "status": row["status"]})
+    results["dated_relative_value_model"] = {"file": "holding-period-results.json",
+                                            "historical_entry_status": holding["quote_gate"]["status"],
+                                            "contract_status": "UNVERIFIED_MATERIAL_FOR_TRANSACTION_USE"}
+    dated_flows = []
+    for side, terms in hp_inputs["instruments"].items():
+        for f in holding_period.cashflows(terms, date.fromisoformat(hp_inputs["settlement_date"])):
+            dated_flows.append({"instrument": side, "isin": terms["isin"], **f,
+                                "schedule_status": "ASSUMED_NOT_CONTRACT_VERIFIED"})
     return {"results.json": json.dumps(results, indent=2, sort_keys=True) + "\n",
             "cashflows.csv": csv_text(flows), "sensitivity.csv": csv_text(sensitivity),
-            "relative-value.csv": csv_text(relative_value), "credit-stress.csv": csv_text(credit_stress)}
+            "relative-value.csv": csv_text(relative_value), "credit-stress.csv": csv_text(credit_stress),
+            "holding-period-results.json": json.dumps(holding, indent=2, sort_keys=True) + "\n",
+            "holding-period-scenarios.csv": csv_text(hp_rows),
+            "entry-hurdles.csv": csv_text(holding["entry_hurdles"]),
+            "dated-cashflows.csv": csv_text(dated_flows)}
 
 
 def main() -> None:
@@ -203,11 +236,11 @@ def main() -> None:
         stale = [name for name, value in outputs.items() if not (ROOT / name).is_file() or (ROOT / name).read_text() != value]
         if stale:
             raise SystemExit("Outputs missing or stale: " + ", ".join(stale))
-        print("PASS: arithmetic checks and all five generated outputs reproduce exactly")
+        print(f"PASS: arithmetic checks and all {len(outputs)} generated outputs reproduce exactly")
     else:
         for name, value in outputs.items():
             (ROOT / name).write_text(value)
-        print("Wrote five deterministic model outputs; arithmetic checks passed")
+        print(f"Wrote {len(outputs)} deterministic model outputs; arithmetic checks passed")
 
 
 if __name__ == "__main__":

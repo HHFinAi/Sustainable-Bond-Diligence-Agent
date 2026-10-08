@@ -1,0 +1,37 @@
+{
+  "research_as_of": "2025-10-16",
+  "contract_status": "UNVERIFIED",
+  "maximum_timestamp_gap_seconds": 60,
+  "status": "NEEDS_DATA_TEMPLATE_NOT_QUOTES",
+  "green": {
+    "isin": "EU000A3K4EG9",
+    "currency": "EUR",
+    "timestamp": null,
+    "settlement_date": null,
+    "price_convention": null,
+    "bid_clean": null,
+    "ask_clean": null,
+    "bid_size_eur": null,
+    "ask_size_eur": null,
+    "quote_type": null,
+    "review_status": "PENDING",
+    "source_url": null,
+    "document_locator": null
+  },
+  "conventional": {
+    "isin": "XS0219724878",
+    "currency": "EUR",
+    "timestamp": null,
+    "settlement_date": null,
+    "price_convention": null,
+    "bid_clean": null,
+    "ask_clean": null,
+    "bid_size_eur": null,
+    "ask_size_eur": null,
+    "quote_type": null,
+    "review_status": "PENDING",
+    "source_url": null,
+    "document_locator": null
+  },
+  "comparison_timezone": "Europe/Paris"
+}
