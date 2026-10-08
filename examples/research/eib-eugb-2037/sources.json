@@ -159,6 +159,45 @@
       "status": "REJECTED_DIRECT_COMPARATOR",
       "limitation": "Currency differs; cross-currency hedge and basis effects would contaminate simple yield comparison",
       "use": "Demonstrate comparator exclusion discipline"
+    },
+    {
+      "id": "S13",
+      "publisher": "Quotrix / B\u00f6rse D\u00fcsseldorf",
+      "title": "Kursblatt Quotrix 2025-09-04",
+      "url": "https://www.quotrix.de/dokument-download/quotrix/kursblatt/Kursblatt-Quotrix-2025.09.04.pdf",
+      "document_date": "2025-09-04",
+      "retrieved_on": "2026-10-08",
+      "locator": "printed pp. 411 and 414 (PDF zero-based pages 410 and 413); exact ISIN rows EU000A3K4EG9 and XS0219724878",
+      "evidence_type": "primary_exchange_historical_daily_pdf",
+      "observed_fact": "Historical zero-volume M price notations for both instruments; see historical-observations.json for exact printed fields",
+      "status": "REVIEWED_FIELDS_ONLY_NOT_EXECUTABLE_QUOTES",
+      "limitation": "No matched two-way quotes, quote-side definition, timezone or settlement/clean-price convention established. Not a 16 October 2025 mark. Excluded from entry model.",
+      "use": "Close the claim that no dated primary historical reference observations were found; retain executable entry-price gap"
+    },
+    {
+      "id": "S14",
+      "publisher": "Quotrix / B\u00f6rse D\u00fcsseldorf",
+      "title": "Kursblatt Quotrix 2025-08-12",
+      "url": "https://www.quotrix.de/dokument-download/quotrix/kursblatt/Kursblatt-Quotrix-2025.08.12.pdf",
+      "document_date": "2025-08-12",
+      "retrieved_on": "2026-10-08",
+      "locator": "printed pp. 416 and 418 (PDF zero-based pages 415 and 417); exact ISIN rows EU000A3K4EG9 and XS0219724878",
+      "evidence_type": "primary_exchange_historical_daily_pdf",
+      "observed_fact": "Historical zero-volume M price notations for both instruments; see historical-observations.json for exact printed fields",
+      "status": "REVIEWED_FIELDS_ONLY_NOT_EXECUTABLE_QUOTES",
+      "limitation": "No matched two-way quotes, quote-side definition, timezone or settlement/clean-price convention established. Not a 16 October 2025 mark. Excluded from entry model.",
+      "use": "Close the claim that no dated primary historical reference observations were found; retain executable entry-price gap"
     }
-  ]
+  ],
+  "follow_up_reviewed_on": "2026-10-08",
+  "search_review_2026_10_08": {
+    "issuer_transaction_page": "Still redirects to disclaimer; direct HTTP returned 403. No issue-specific signed terms retrieved.",
+    "issue_terms_queries": [
+      "EU000A3K4EG9 final terms EARN prospectus",
+      "site.eib.org 15 May 2037 terms conditions",
+      "site.borsaitaliana.it EU000A3K4EG9 pdf"
+    ],
+    "exact_cut_quote_attempt": "Quotrix Kursblatt-Quotrix-2025.10.16.pdf was inaccessible in this review. Other primary historical sheets were retrieved but do not contain executable matched two-way observations for the cutoff.",
+    "allocation_and_impact": "Existing 2024 issuer framework reviewed; linked allocation/impact landing pages continue to redirect to disclaimer. No project spreadsheet, full issue-year report, actual net proceeds or issue fee independently retrieved. Do not substitute 0.155% programme-average fee for this bond\u2019s actual fee."
+  }
 }

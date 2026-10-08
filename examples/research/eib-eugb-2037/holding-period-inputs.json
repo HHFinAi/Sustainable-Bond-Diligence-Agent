@@ -1,0 +1,96 @@
+{
+  "research_as_of": "2025-10-16",
+  "prepared_on": "2026-10-08",
+  "status": "ILLUSTRATIVE_CONDITIONAL_MODEL_NOT_OBSERVED_MARKET",
+  "settlement_date": "2025-10-20",
+  "exit_settlement_date": "2027-10-20",
+  "settlement_basis": "Analyst-selected T+2 from Thursday 16 October 2025; no contract/business-day-calendar proof",
+  "zero_curve_assumption": [
+    {
+      "tenor_years": 0,
+      "zero_rate_cc": 0.02
+    },
+    {
+      "tenor_years": 0.5,
+      "zero_rate_cc": 0.021
+    },
+    {
+      "tenor_years": 1,
+      "zero_rate_cc": 0.022
+    },
+    {
+      "tenor_years": 2,
+      "zero_rate_cc": 0.023
+    },
+    {
+      "tenor_years": 3,
+      "zero_rate_cc": 0.024
+    },
+    {
+      "tenor_years": 5,
+      "zero_rate_cc": 0.026
+    },
+    {
+      "tenor_years": 7,
+      "zero_rate_cc": 0.028
+    },
+    {
+      "tenor_years": 10,
+      "zero_rate_cc": 0.03
+    },
+    {
+      "tenor_years": 15,
+      "zero_rate_cc": 0.032
+    }
+  ],
+  "conventional_z_spread_bps": 50.0,
+  "reinvestment_rate_cc": 0.025,
+  "funding_rate_cc": 0.025,
+  "costs": {
+    "green": {
+      "entry_bps_of_dirty_value": 15,
+      "exit_bps_of_dirty_value": 15
+    },
+    "conventional": {
+      "entry_bps_of_dirty_value": 5,
+      "exit_bps_of_dirty_value": 5
+    }
+  },
+  "instruments": {
+    "green": {
+      "isin": "EU000A3K4EG9",
+      "currency": "EUR",
+      "coupon_rate": 0.03125,
+      "interest_commencement_date": "2025-04-09",
+      "first_coupon_date": "2025-05-15",
+      "maturity_date": "2037-05-15",
+      "redemption_per_100": 100,
+      "contract_status": "PAYMENT_SCHEDULE_AND_LEGAL_TERMS_UNVERIFIED",
+      "source_ids": [
+        "S03",
+        "S07"
+      ]
+    },
+    "conventional": {
+      "isin": "XS0219724878",
+      "currency": "EUR",
+      "coupon_rate": 0.04,
+      "interest_commencement_date": "2024-10-15",
+      "first_coupon_date": "2025-10-15",
+      "maturity_date": "2037-10-15",
+      "redemption_per_100": 100,
+      "contract_status": "CANDIDATE_STATIC_REFERENCE_ONLY_PAYMENT_SCHEDULE_AND_LEGAL_TERMS_UNVERIFIED",
+      "source_ids": [
+        "S11"
+      ],
+      "date_scope": "Interest commencement and first_coupon are artificial schedule anchors for future valuation, not original issuance terms"
+    }
+  },
+  "assumption_ids": [
+    "A07",
+    "A08",
+    "A09",
+    "A10"
+  ],
+  "policy": "No observed entry level or investment approval is generated. Replace assumptions only after reviewing actual terms and a matched quote packet."
+}

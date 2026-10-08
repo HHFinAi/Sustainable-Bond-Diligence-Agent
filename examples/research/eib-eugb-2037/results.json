@@ -24,6 +24,11 @@
       "status": "ONE_OFF_STATIC_STRESS_NO_CALLABLE_CAPITAL_OR_FUTURE_PROFIT"
     }
   ],
+  "dated_relative_value_model": {
+    "contract_status": "UNVERIFIED_MATERIAL_FOR_TRANSACTION_USE",
+    "file": "holding-period-results.json",
+    "historical_entry_status": "NEEDS_DATA"
+  },
   "first_coupon_days": 36,
   "first_coupon_per_100": 0.3082191780821918,
   "inputs_sha256": "0b0325d5ce1e70459c4e5d112e04f6f1973347703969a46c627b1d15b3b50412",

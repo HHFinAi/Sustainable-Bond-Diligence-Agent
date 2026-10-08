@@ -1,0 +1,56 @@
+{
+  "reviewed_on": "2026-10-08",
+  "historical_information_cut": "2025-10-16",
+  "status": "RETRIEVED_HISTORICAL_PRIMARY_REFERENCE_OBSERVATIONS_EXCLUDED_FROM_ENTRY_PRICING",
+  "observations": [
+    {
+      "isin": "EU000A3K4EG9",
+      "date": "2025-09-04",
+      "time_as_printed_no_verified_timezone": "07:27:07",
+      "notation_per_100_as_printed": 99.885,
+      "volume_eur_as_printed": 0,
+      "side_code_as_printed": "M",
+      "printed_page": 414,
+      "source_id": "S13",
+      "input_use": "EXCLUDED",
+      "reason": "Zero-volume M entry; no verified side-code definition, clean/dirty convention, executable two-way prices or sizes; not a 16 October observation"
+    },
+    {
+      "isin": "XS0219724878",
+      "date": "2025-09-04",
+      "time_as_printed_no_verified_timezone": "07:27:06",
+      "notation_per_100_as_printed": 108.386,
+      "volume_eur_as_printed": 0,
+      "side_code_as_printed": "M",
+      "printed_page": 411,
+      "source_id": "S13",
+      "input_use": "EXCLUDED",
+      "reason": "Zero-volume M entry; no verified side-code definition, clean/dirty convention, executable two-way prices or sizes; not a 16 October observation"
+    },
+    {
+      "isin": "EU000A3K4EG9",
+      "date": "2025-08-12",
+      "time_as_printed_no_verified_timezone": "07:27:06",
+      "notation_per_100_as_printed": 100.59,
+      "volume_eur_as_printed": 0,
+      "side_code_as_printed": "M",
+      "printed_page": 418,
+      "source_id": "S14",
+      "input_use": "EXCLUDED",
+      "reason": "Zero-volume M entry; no verified side-code definition, clean/dirty convention, executable two-way prices or sizes; not a 16 October observation"
+    },
+    {
+      "isin": "XS0219724878",
+      "date": "2025-08-12",
+      "time_as_printed_no_verified_timezone": "07:27:05",
+      "notation_per_100_as_printed": 109.086,
+      "volume_eur_as_printed": 0,
+      "side_code_as_printed": "M",
+      "printed_page": 416,
+      "source_id": "S14",
+      "input_use": "EXCLUDED",
+      "reason": "Zero-volume M entry; no verified side-code definition, clean/dirty convention, executable two-way prices or sizes; not a 16 October observation"
+    }
+  ],
+  "review_scope": "ISIN, date, printed time, notation, volume and side code read from primary daily sheets. No interpretation of M as a midpoint and no liquidity inference."
+}

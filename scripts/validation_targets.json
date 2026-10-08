@@ -1,0 +1,12 @@
+{
+  "version": "1",
+  "checks": [
+    {
+      "name": "eib-relative-value",
+      "arguments": [
+        "examples/research/eib-eugb-2037/calculate.py",
+        "--check"
+      ]
+    }
+  ]
+}
