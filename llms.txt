@@ -13,4 +13,6 @@ Published source repository v0.1.0, by HHFinAi: https://github.com/HHFinAi/Susta
 - [FAQ](docs/FAQ.md)
 - [Actual validation](docs/VALIDATION.md)
 - [Synthetic sample](examples/reports/synthetic-packet.md)
+- [EIB EuGB 2037 historical research memo](examples/research/eib-eugb-2037/MEMO.md)
+- [EIB terms, comparator inputs and reproduction](examples/research/eib-eugb-2037/README.md)
 - [Incomplete primary-source study](examples/reports/source-study-packet.md)
