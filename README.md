@@ -1,5 +1,7 @@
 # Sustainable Bond Research and Diligence
 
+> **Responsible AI:** Analyst-controlled research; verify evidence, disclose AI assistance and protect confidential information. [Policy and project-specific checks](RESPONSIBLE_AI.md).
+
 **Investment research by HHFinAi: underlying credit, contractual protections, sustainability claims and relative value.**
 
 A credible label does not establish a good bond investment. What does the investor own, how is repayment supported, and is the entry price defensible?
