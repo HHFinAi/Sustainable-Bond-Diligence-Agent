@@ -1,0 +1,46 @@
+{
+  "template_version": "1.0",
+  "prepared_on": "2026-11-18",
+  "status": "NEEDS_DATA",
+  "investment_decision": "NOT_ASSESSED",
+  "instrument": {
+    "isin": null,
+    "ticker": null,
+    "obligor": null,
+    "guarantor": null,
+    "currency": null,
+    "seniority": null,
+    "maturity": null,
+    "clean_bid": null,
+    "clean_ask": null,
+    "quote_timestamp_utc": null
+  },
+  "physical_exposure": {
+    "collateral_or_service_territory": null,
+    "location_precision": null,
+    "primary_hazard_source_id": null,
+    "policy_exclusions": null,
+    "uninsured_loss_stress_m": null
+  },
+  "funding": {
+    "project_authorization_id": null,
+    "payer": null,
+    "committed_funding_m": null,
+    "project_capex_m": null,
+    "project_opex_m": null,
+    "drawdown_schedule": null
+  },
+  "credit": {
+    "annual_debt_service_m": null,
+    "dscr": null,
+    "refinancing_stress_bps": null,
+    "eligible_recovery_source": null
+  },
+  "separate_assessments": {
+    "repayment": "NEEDS_DATA",
+    "resilience_outcome": "NEEDS_DATA",
+    "security_pricing": "NEEDS_DATA"
+  },
+  "source_ids": [],
+  "human_review": null
+}

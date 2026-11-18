@@ -22,3 +22,8 @@ Method references are not proof of subject facts or automatic legal compliance. 
 
 ## Failure and verification checks
 Return NEEDS_DATA/BLOCKED with precise missing inputs when material evidence is absent. A polished paragraph is not a substitute for evidence. Check entity, period, currency, unit, denominator, restatement, point-in-time availability and contradictory evidence. Explain the strongest plausible alternative interpretation and whether it changes the decision. Record material concerns in the issue register. Do not call the human approval action. Confidence is subjective and must state its scope, not pretend to be a calibrated probability.
+
+
+## Resilience bond pricing overlay (18 Nov 2026)
+
+For adaptation-linked municipal, utility or corporate debt: test spread compensation for local physical risk; duration, covenants, structural security, amortization, refinancing, liquidity and comparable alternatives. Do not infer a liquidity premium, credit benefit or greenium from aggregate climate-adaptation expenditure or issuer sustainability claims. A government infrastructure plan is not a tradable instrument; require ISIN, security terms and dated executable market quote. For catastrophe transfer, explicitly distinguish a reinsurance policy from a bond with principal at risk.

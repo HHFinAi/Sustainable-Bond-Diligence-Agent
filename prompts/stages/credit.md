@@ -22,3 +22,8 @@ Method references are not proof of subject facts or automatic legal compliance. 
 
 ## Failure and verification checks
 Return NEEDS_DATA/BLOCKED with precise missing inputs when material evidence is absent. A polished paragraph is not a substitute for evidence. Check entity, period, currency, unit, denominator, restatement, point-in-time availability and contradictory evidence. Explain the strongest plausible alternative interpretation and whether it changes the decision. Record material concerns in the issue register. Do not call the human approval action. Confidence is subjective and must state its scope, not pretend to be a calibrated probability.
+
+
+## Climate adaptation / resilience credit overlay (18 Nov 2026)
+
+If physical risks or a resilience-financing use of proceeds are material, map hazard and collateral/service-region exposure, borrower debt-service channel, project bankability, adaptation capex, insurance deductibles, loss reserves and documented repayment support. Distinguish general adaptation **need**, approved fiscal/regulated utility budgets, actual debt issuance, disbursement, and debt service. Stress construction delays, cost overruns, grant expiry, contingent liabilities, reinsurance repricing and failure of avoided-loss forecasts. A green or resilience label does NOT improve credit without repayment evidence. Consult `docs/CLIMATE_RESILIENCE_CREDIT.md`; explicitly retain NEEDS_DATA on missing collateral, repayment, quote, recourse or local risk evidence.
