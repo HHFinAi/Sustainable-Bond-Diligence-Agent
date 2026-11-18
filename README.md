@@ -95,3 +95,8 @@ The original engine, research case, numerical results and approval controls are 
 [Desktop guide](START_HERE_GITHUB_DESKTOP.md) · [Repository metadata](repository-metadata.json) · [Discoverability](docs/GEO_SEO.md) · [Method sources](references/SOURCES.md) · [Data requirements](docs/DATA_SOURCES.md) · [Security](SECURITY.md)
 
 Original code, prompts and examples: MIT, Copyright 2026 HHFinAi. Third-party sources retain their rights. No affiliation with or endorsement by referenced institutions or standard setters is implied. [Licence](LICENSE) · [Notices](NOTICE.md).
+
+
+## Climate resilience credit research extension (November 2026)
+
+The [physical adaptation credit overlay](docs/CLIMATE_RESILIENCE_CREDIT.md) adds instrument-specific hazard/collateral, committed adaptation funding, utility and municipal repayment tests, catastrophe-risk and quote/greenium caution to the existing `credit` and `market` prompts. An explicit [incomplete diligence template](examples/climate-resilience-credit-template.json) retains `NEEDS_DATA` until obligor, instrument and market evidence are available.
